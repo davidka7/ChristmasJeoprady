@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modals from "./Modals";
+import Emoji from "./Emoji";
 import Modals1 from "./Modals1";
 
 // import useSound from "use-sound";
@@ -15,6 +16,7 @@ import CardDeck from "react-bootstrap/CardDeck";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Scrambler from "scrambling-text";
 import "./Chop.css";
+
 // import darkImage from "./dark1.jpg";
 import data1 from "./1.json";
 import data2 from "./2.json";
@@ -22,7 +24,7 @@ import data3 from "./3.json";
 import data4 from "./4.json";
 import data5 from "./5.json";
 import category from "./category.json";
-import jp from "./jp.mp3";
+
 function Chop({ points }) {
   // const [play] = useSound(jp);
   const [trueOrFalse, setTrueOrFalse] = useState(false);
@@ -36,6 +38,10 @@ function Chop({ points }) {
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
   const [team4color, setTeam4color] = useState("light");
+  // const [team1mascot, setteam1mascot] = useState("light");
+  // const [team2mascot, setteam2mascot] = useState("light");
+  // const [team3mascot, setteam3mascot] = useState("light");
+  // const [team4mascot, setteam4mascot] = useState("light");
 
   const changeTeam = () => {
     if (TeamPlaying == team1) {
@@ -87,6 +93,7 @@ function Chop({ points }) {
   const teamcolors4 = (e) => {
     setTeam4color(e.target.value);
   };
+
   return (
     <div className="full-size">
       {trueOrFalse ? (
@@ -95,28 +102,28 @@ function Chop({ points }) {
             <br />
             <CardDeck className="paddings max-height">
               {" "}
-              <Card bg={team1color} className={`life${team1color}`}>
+              <Card bg={"transparent"} className={`life${team1color}`}>
                 <Card.Title className="second-Click "> Team {team1}</Card.Title>
                 <Card.Title className="second-Click">
                   {" "}
                   Points: {points.reducers1}
                 </Card.Title>
               </Card>
-              <Card bg={team2color} className={`life${team2color}`}>
+              <Card bg={"transparent"} className={`life${team2color}`}>
                 <Card.Title className="second-Click">Team {team2}</Card.Title>
                 <Card.Title className="second-Click">
                   {" "}
                   Points: {points.reducers2}
                 </Card.Title>
               </Card>
-              <Card bg={team3color} className={`life${team3color}`}>
+              <Card bg={"transparent"} className={`life${team3color}`}>
                 <Card.Title className="second-Click">Team {team3}</Card.Title>
                 <Card.Title className="second-Click">
                   {" "}
                   Points: {points.reducers3}
                 </Card.Title>
               </Card>
-              <Card bg={team4color} className={`life${team4color}`}>
+              <Card bg={"transparent"} className={`life${team4color}`}>
                 <Card.Title className="second-Click">Team {team4}</Card.Title>
                 <Card.Title className="second-Click">
                   {" "}
@@ -227,162 +234,375 @@ function Chop({ points }) {
         </div>
       ) : (
         <div className="first-Click">
-          <div class="bubbles  first-Click">Name Your Teams</div>
+          <div class="bubbles  first-Click">
+            {" "}
+            <h1>Name Your Teams</h1>
+          </div>
 
           <CardDeck className="paddings">
-            <Card className="special-corner" bg={team1color}>
-              {" "}
-              <Card.Body className="paddings1">
-                <div>
-                  <label className="second-Click">Teams Name:</label>
-                  <input onChange={teams1} className="maxer"></input>
-                </div>
-                <div>
-                  <label className="second-Click">
-                    Teams Color:
-                    <Button
-                      onClick={teamcolors1}
-                      value="secondary"
-                      variant="secondary"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="danger"
-                      onClick={teamcolors1}
-                      variant="danger"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="success"
-                      onClick={teamcolors1}
-                      variant="success"
-                    >
-                      {" "}
-                    </Button>
-                    <Button value="info" onClick={teamcolors1} variant="info">
-                      {" "}
-                    </Button>
-                  </label>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card className="special-corner" bg={team2color}>
-              {" "}
-              <Card.Body className="paddings1">
-                <div>
-                  <label className="second-Click">Teams Name:</label>
-                  <input onChange={teams2} className="maxer"></input>
-                </div>
-                <div>
-                  <label className="second-Click">
-                    Teams Color:
-                    <Button
-                      value="secondary"
-                      onClick={teamcolors2}
-                      variant="secondary"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="danger"
-                      onClick={teamcolors2}
-                      variant="danger"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="success"
-                      onClick={teamcolors2}
-                      variant="success"
-                    >
-                      {" "}
-                    </Button>
-                    <Button value="info" onClick={teamcolors2} variant="info">
-                      {" "}
-                    </Button>
-                  </label>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card className="special-corner" bg={team3color}>
-              {" "}
-              <Card.Body className="paddings1">
-                <div>
-                  <label className="second-Click">Teams Name:</label>
-                  <input onChange={teams3} className="maxer"></input>
-                </div>
-                <div>
-                  <label className="second-Click">
-                    Teams Color:
-                    <Button
-                      onClick={teamcolors3}
-                      value="secondary"
-                      variant="secondary"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="danger"
-                      onClick={teamcolors3}
-                      variant="danger"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="success"
-                      onClick={teamcolors3}
-                      variant="success"
-                    >
-                      {" "}
-                    </Button>
-                    <Button value="info" onClick={teamcolors3} variant="info">
-                      {" "}
-                    </Button>
-                  </label>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card className="special-corner" bg={team4color}>
-              {" "}
-              <Card.Body className="paddings1">
-                <div>
-                  <label className="second-Click">Teams Name:</label>
-                  <input onChange={teams4} className="maxer"></input>
-                </div>
-                <div>
-                  <label className="second-Click">
-                    Teams Color:
-                    <Button
-                      onClick={teamcolors4}
-                      value="secondary"
-                      variant="secondary"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="danger"
-                      onClick={teamcolors4}
-                      variant="danger"
-                    >
-                      {" "}
-                    </Button>
-                    <Button
-                      value="success"
-                      onClick={teamcolors4}
-                      variant="success"
-                    >
-                      {" "}
-                    </Button>
-                    <Button value="info" onClick={teamcolors4} variant="info">
-                      {" "}
-                    </Button>
-                  </label>
-                </div>
-              </Card.Body>
-            </Card>
+            {team1color === "light" ? (
+              <Card
+                className={`special-corner life${team1color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams1} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        onClick={teamcolors1}
+                        value="secondary"
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors1}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors1}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors1} variant="info">
+                        {" "}
+                      </Button>
+                    </label>
+                  </div>
+                </Card.Body>
+              </Card>
+            ) : (
+              <Card
+                className={`special-corner life${team1color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams1} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        onClick={teamcolors1}
+                        value="secondary"
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors1}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors1}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors1} variant="info">
+                        {" "}
+                      </Button>
+                    </label>
+                    <br /> <br />
+                    <label className="second-Click">
+                      Create Your <br /> <br /> Mascot: Click <br />
+                      <br /> <br /> <Emoji />
+                    </label>
+                  </div>
+                </Card.Body>
+              </Card>
+            )}
+            {team2color === "light" ? (
+              <Card
+                className={`special-corner life${team2color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams2} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        value="secondary"
+                        onClick={teamcolors2}
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors2}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors2}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors2} variant="info">
+                        {" "}
+                      </Button>
+                    </label>{" "}
+                  </div>
+                </Card.Body>
+              </Card>
+            ) : (
+              <Card
+                className={`special-corner life${team2color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams2} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        value="secondary"
+                        onClick={teamcolors2}
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors2}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors2}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors2} variant="info">
+                        {" "}
+                      </Button>
+                    </label>{" "}
+                    <br /> <br />
+                    <label className="second-Click">
+                      Create Your <br /> <br /> Mascot: Click <br /> <br />{" "}
+                      <br /> <Emoji />
+                    </label>
+                  </div>
+                </Card.Body>
+              </Card>
+            )}{" "}
+            {team3color === "light" ? (
+              <Card
+                className={`special-corner life${team3color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams3} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        onClick={teamcolors3}
+                        value="secondary"
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors3}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors3}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors3} variant="info">
+                        {" "}
+                      </Button>
+                    </label>{" "}
+                  </div>
+                </Card.Body>
+              </Card>
+            ) : (
+              <Card
+                className={`special-corner life${team3color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams3} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        onClick={teamcolors3}
+                        value="secondary"
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors3}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors3}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors3} variant="info">
+                        {" "}
+                      </Button>
+                    </label>{" "}
+                    <br /> <br />
+                    <label className="second-Click">
+                      Create Your <br /> <br />
+                      Mascot: Click <br />
+                      <br /> <br /> <Emoji />
+                    </label>
+                  </div>
+                </Card.Body>
+              </Card>
+            )}
+            {team4color === "light" ? (
+              <Card
+                className={`special-corner life${team4color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams4} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        onClick={teamcolors4}
+                        value="secondary"
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors4}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors4}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors4} variant="info">
+                        {" "}
+                      </Button>
+                    </label>{" "}
+                  </div>
+                </Card.Body>
+              </Card>
+            ) : (
+              <Card
+                className={`special-corner life${team4color}s`}
+                bg={"transparent"}
+              >
+                {" "}
+                <Card.Body className="paddings1">
+                  <div>
+                    <label className="second-Click">Teams Name:</label>
+                    <input onChange={teams4} className="maxer"></input>
+                  </div>
+                  <div>
+                    <label className="second-Click">
+                      Teams Color:
+                      <Button
+                        onClick={teamcolors4}
+                        value="secondary"
+                        variant="secondary"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="danger"
+                        onClick={teamcolors4}
+                        variant="danger"
+                      >
+                        {" "}
+                      </Button>
+                      <Button
+                        value="success"
+                        onClick={teamcolors4}
+                        variant="success"
+                      >
+                        {" "}
+                      </Button>
+                      <Button value="info" onClick={teamcolors4} variant="info">
+                        {" "}
+                      </Button>
+                    </label>{" "}
+                    <br /> <br />
+                    <label className="second-Click">
+                      Create Your <br /> <br /> Mascot: Click <br />
+                      <br /> <br /> <Emoji />
+                    </label>
+                  </div>
+                </Card.Body>
+              </Card>
+            )}
           </CardDeck>
+          <br />
           <div onClick={changeTeam}>
             <Button
               variant="transparent"

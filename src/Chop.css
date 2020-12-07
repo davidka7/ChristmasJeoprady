@@ -29,14 +29,41 @@ font-size:4vw;
 /* text-shadow: 1px 1px #ffffff, 
                    2px 2px #ffffff, 
                    3px 3px #ffffff; */
+              
 }
+
+
+.bubbles h1{
+  font-size:4vw !important;
+  text-transform: uppercase;
+  font-weight:900;
+  background-image: url(water.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+ animation: water 400s infinite;
+
+}
+@keyframes water {
+from {
+background-position: left 0 top 0;
+
+      }
+to {
+  background-position: left 1000px top 0;
+    }
+}
+
+
+
+
 .first-Click1{
   /* color: white; */
   text-align: center ;
   
-  height:400px;
+  height:250px;
   color:rgb(255, 255, 255);
-  font-size:4vw;
+  font-size:3.5vw;
   /* text-shadow: 1px 1px #ffffff, 
                      2px 2px #ffffff, 
                      3px 3px #ffffff; */
@@ -46,7 +73,7 @@ font-size:4vw;
     text-align: center ;
   
  
-    color:black;
+    color:rgb(255, 255, 255);
     font-size:2.3vw;
     /* text-shadow: 1px 1px #ffffff, 
                        2px 2px #ffffff, 
@@ -71,8 +98,8 @@ font-size:4vw;
       
         border-image: url("donut.png");
      
-        border-image-width: 150px;
-    
+        border-image-width: 100px;
+  
     }
     .outlinerz:hover {
        
@@ -101,7 +128,7 @@ font-size:2.3vw
  }
  .special-corner{
     border-radius: 5%;
-height:360px;
+height:400px;
 
  }
  .special-font{
@@ -123,6 +150,7 @@ margin-top:40px;
     line-height: 20px;
     height: 160px;
     padding: 40px;
+    
     box-shadow: 0 0 0 10px white;
     outline: dashed 10px #012642;
 }
@@ -151,4 +179,41 @@ margin-top:40px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
     outline: dashed 10px #021e42; 
+}
+
+  
+.lifesecondarys{
+
+   line-height: 20px;
+
+
+   
+   box-shadow: 0 0 0 10px white;
+   outline: dashed 10px #012642;
+}
+.lifedangers{
+  
+   line-height: 20px;
+
+ 
+   box-shadow: 0 0 0 10px white;
+   outline: dashed 10px #35000e; 
+}
+
+.lifesuccesss{
+   
+  
+   line-height: 20px;
+ 
+
+   box-shadow: 0 0 0 10px white;
+   outline: dashed 10px #013d36;
+}
+.lifeinfos{
+
+   line-height: 20px;
+ 
+  
+   box-shadow: 0 0 0 10px white;
+   outline: dashed 10px #021e42; 
 }
