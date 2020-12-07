@@ -1,0 +1,92 @@
+.sizer{
+
+    background-size: 900px 1120px;
+
+}
+.hover1 {
+    display: block;
+   
+    position: relative;
+  
+   
+  }
+  .hover1 .go-corner {
+    opacity: 0.2;
+  }
+  .hover1:hover {
+    border: 1px solid #00838d;
+    box-shadow: 0px 0px 99px 99px rgba(255, 255, 255, 0.5);
+    z-index: 500;
+  }
+  
+  .hover1:hover p {
+    color: #00838d;
+  }
+  .hover1:hover .go-corner {
+    -webkit-transition: opactiy 0.8s linear;
+    transition: opactiy 0.8s linear;
+    opacity: 1;
+  }
+  
+.fonty{
+background-color:navy;
+font-size: 1.8vw !important;
+color: rgb(255, 244, 150);
+
+display: flex;
+justify-content: space-around;
+
+}
+.outliners{
+  background-color:navy !important;
+    justify-content: center;
+   align-items: center;
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    color: rgb(255, 159, 159);
+    padding: 40px;
+    box-shadow: 0 0 0 10px navy;
+    outline: dashed 10px #014740;
+  
+}
+.outliners11{
+  justify-content: center;
+ align-items: center;
+  font-family: Arial;
+  font-size: 18px;
+ color:white !important;
+ background-color: navy !important;
+
+}
+.z1-size{
+  max-height: 50px !important; 
+  max-width:130px !important 
+}
+.z100-size{
+    max-height: 90px !important; 
+    max-width:130px !important 
+}
+.z200-size{
+    max-height: 94px !important; 
+    max-width:150px !important
+}
+.z300-size{
+    max-height: 98px !important; 
+    max-width:180px !important
+}
+.z400-size{
+    max-height: 101px !important; 
+    max-width:240px !important
+}
+.z500-size{
+    max-height: 105px !important; 
+    max-width:280px !important 
+}
+.no-wrapper{
+
+    white-space: nowrap;
+ text-align: center ;
+
+}
