@@ -38,30 +38,32 @@ function Chop({ points }) {
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
   const [team4color, setTeam4color] = useState("light");
-  // const [team1mascot, setteam1mascot] = useState("light");
-  // const [team2mascot, setteam2mascot] = useState("light");
-  // const [team3mascot, setteam3mascot] = useState("light");
-  // const [team4mascot, setteam4mascot] = useState("light");
+  const [cursor, setCursor] = useState("");
 
   const changeTeam = () => {
     if (TeamPlaying == team1) {
       setTeamPlaying(team2);
+      setCursor(points.animal2);
       // msg.text = `Team ${team2} Turn`;
       // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team2) {
       setTeamPlaying(team3);
+      setCursor(points.animal3);
       // msg.text = `Team ${team3} Turn`;
       // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team3) {
       setTeamPlaying(team4);
+      setCursor(points.animal4);
       // msg.text = `Team ${team4} Turn`;
       // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team4) {
       setTeamPlaying(team1);
+      setCursor(points.animal1);
       // msg.text = `Team ${team1} Turn`;
       // window.speechSynthesis.speak(msg);
     } else {
       setTeamPlaying(team1);
+      setCursor(points.animal1);
     }
   };
 
@@ -98,7 +100,7 @@ function Chop({ points }) {
     <div className="full-size">
       {trueOrFalse ? (
         <div>
-          <div>
+          <div className={`break-cursor-${cursor}`}>
             <br />
             <CardDeck className="paddings max-height">
               {" "}
@@ -248,12 +250,12 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams1} className="maxer"></input>
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         onClick={teamcolors1}
                         value="secondary"
@@ -295,7 +297,7 @@ function Chop({ points }) {
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         onClick={teamcolors1}
                         value="secondary"
@@ -339,7 +341,7 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams2} className="maxer"></input>
                   </div>
                   <div>

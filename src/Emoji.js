@@ -8,57 +8,59 @@ function Emoji({ r1, r2, r3, r4, number }) {
   const animal1 = () => {
     setAnimal("🐶");
     setChecker(false);
+    handleSubmitter("🐶");
   };
   const animal2 = () => {
     setAnimal("🐷");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐷");
   };
   const animal3 = () => {
     setAnimal("🐸");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐸");
   };
   const animal4 = () => {
     setAnimal("🐹");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐹");
   };
   const animal5 = () => {
     setAnimal("🐵");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐵");
   };
   const animal6 = () => {
     setAnimal("🐰");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐰");
   };
   const animal7 = () => {
     setAnimal("🐭");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐭");
   };
   const animal8 = () => {
     setAnimal("🐮");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐮");
   };
   const animal9 = () => {
     setAnimal("🐨");
     setChecker(false);
-    handleSubmitter();
+    handleSubmitter("🐨");
   };
 
-  const handleSubmitter = () => {
+  const handleSubmitter = (string) => {
+    console.log(number, string);
     if (number == 1) {
-      r1(animal);
+      r1(string);
     } else if (number == 2) {
-      r2(animal);
+      r2(string);
     } else if (number == 3) {
-      r3(animal);
+      r3(string);
     } else if (number == 4) {
-      r4(animal);
+      r4(string);
     }
   };
 

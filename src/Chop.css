@@ -1,7 +1,33 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
-
+.break-cursor-🐶{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐶</text></svg>") 16 0,auto;
+}
+.break-cursor-🐷{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐷</text></svg>") 16 0,auto;
+}
+.break-cursor-🐸{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐸</text></svg>") 16 0,auto;
+}
+.break-cursor-🐹{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐹</text></svg>") 16 0,auto;
+}
+.break-cursor-🐵{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐵</text></svg>") 16 0,auto;
+}
+.break-cursor-🐰{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐰</text></svg>") 16 0,auto;
+}
+.break-cursor-🐭{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐭</text></svg>") 16 0,auto;
+}
+.break-cursor-🐮{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐮</text></svg>") 16 0,auto;
+}
+.break-cursor-🐨{
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🐨</text></svg>") 16 0,auto;
+}
 span{font-family: 'Montserrat', sans-serif;
     justify-content: center;
   position: absolute;
@@ -216,4 +242,10 @@ margin-top:40px;
   
    box-shadow: 0 0 0 10px white;
    outline: dashed 10px #021e42; 
+}
+.animals{
+  align-self: left !important;
+padding-left:10px !important;
+font-size: 3vw
+
 }
