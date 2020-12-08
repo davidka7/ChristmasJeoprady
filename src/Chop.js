@@ -24,7 +24,7 @@ import data3 from "./3.json";
 import data4 from "./4.json";
 import data5 from "./5.json";
 import category from "./category.json";
-
+import last from "./last.json";
 function Chop({ points }) {
   // const [play] = useSound(jp);
   const [firstCheck, setFirstCheck] = useState(true);
@@ -680,11 +680,23 @@ function Chop({ points }) {
           <br />
           <br />
           <Button>
-            <h1>Take It</h1>
+            <h1>
+              Take It{" "}
+              <Modals
+                changeTeam={changeTeam}
+                team1={team1}
+                team2={team2}
+                team3={team3}
+                team4={team4}
+                TeamPlaying={TeamPlaying}
+                key
+                data={last[lastPlay]}
+              />
+            </h1>
           </Button>
           <br />
           <br />
-          <Button>
+          <Button onClick={changeTeam}>
             <h1>Skip It</h1>
           </Button>
           <br />

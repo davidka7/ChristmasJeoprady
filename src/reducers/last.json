@@ -1,0 +1,42 @@
+[
+    {
+      "id": 101,
+      "points": 1200,
+      "question": "How much should you read your Bible?",
+      "answer": "daily",
+      "background_image": 
+      "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    
+     
+    },
+    {
+        "id": 1200,
+        "points": 100,
+        "question": "Does Santa think i68 is worthy of his presents",
+        "answer": "yes",
+        "background_image": 
+        "https://i.pinimg.com/originals/c2/e6/55/c2e655256db995ffac7d560921869be9.jpg"
+      
+       
+      },
+      {
+        "id": 1200,
+        "points": 100,
+        "question": "question",
+        "answer": "answer",
+        "background_image": 
+        ""
+      
+       
+      },
+      {
+        "id": 1200,
+        "points": 100,
+        "question": "question",
+        "answer": "answer",
+        "background_image": 
+        ""
+      
+       
+      }
+]
