@@ -50,3 +50,8 @@ export const r4 = (animal, dispatch) => {
     payload: animal,
   });
 };
+export const c1 = (dispatch) => {
+  dispatch({
+    type: "ADD",
+  });
+};

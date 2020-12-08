@@ -7,6 +7,7 @@ import { r1 } from "./r1";
 import { r2 } from "./r2";
 import { r3 } from "./r3";
 import { r4 } from "./r4";
+import { c1 } from "./c1";
 export default combineReducers({
   reducers1: reducer1,
   reducers2: reducer2,
@@ -16,6 +17,7 @@ export default combineReducers({
   animal2: r2,
   animal3: r3,
   animal4: r4,
+  checker: c1,
   // boards: combineReducers({
   //     cards: cardsReducer,
   // })

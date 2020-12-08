@@ -67,7 +67,7 @@ font-size:4vw;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
- animation: water 400s infinite;
+ animation: water 100s infinite;
 
 }
 @keyframes water {

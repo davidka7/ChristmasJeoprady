@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
-import { reducer1, reducer2, reducer3, reducer4 } from "./actions/dragger";
+import { reducer1, reducer2, reducer3, reducer4, c1 } from "./actions/dragger";
 import useSound from "use-sound";
 
 import boopSfx from "./error.wav";
@@ -22,11 +22,13 @@ function Modals({
   reducer2,
   reducer3,
   reducer4,
+  c1,
 }) {
   const [play] = useSound(boopSfx);
   const [play1] = useSound(yes);
   const [show, setShow] = useState(false);
   const [tries, setTries] = useState(2);
+
   const [points] = useState(data.points);
 
   const handleClose = () => setShow(false);
@@ -36,11 +38,12 @@ function Modals({
     setNewValue(e.target.value);
   };
   const handleSubmit = (e) => {
-    setTries(tries - 1);
     changeTeam();
+
     if (data.answer === newValue) {
       setTries(0);
       play1();
+      handlePress();
       if (TeamPlaying === team1) {
         e.persist();
 
@@ -58,8 +61,15 @@ function Modals({
     } else {
       {
         play();
+        if (tries == 1) {
+          handlePress();
+        }
+        setTries(tries - 1);
       }
     }
+  };
+  const handlePress = () => {
+    c1();
   };
   return (
     <>
@@ -112,6 +122,7 @@ const mapDispatchToProps = (dispatch) => {
     reducer2: (points) => reducer2(points, dispatch),
     reducer3: (points) => reducer3(points, dispatch),
     reducer4: (points) => reducer4(points, dispatch),
+    c1: () => c1(dispatch),
     // reducer1: (points) => reducer1(points, dispatch),
     // reducer2: (points) => reducer2(points, dispatch),
     // reducer3: (points) => reducer3(points, dispatch),
