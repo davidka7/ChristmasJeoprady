@@ -95,13 +95,13 @@ function Emoji({ r1, r2, r3, r4, number }) {
           <br />
           <button onClick={animal7} className="back">
             🎁
-          </button>
+          </button>{" "}
           <button onClick={animal8} className="back">
             🎁
-          </button>
+          </button>{" "}
           <button onClick={animal9} className="back">
             🎁
-          </button>
+          </button>{" "}
         </div>
       ) : (
         <div classsName="container">{animal}</div>
