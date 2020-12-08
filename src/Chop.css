@@ -116,11 +116,11 @@ to {
 
 .first-Click1{
   /* color: white; */
-  text-align: center ;
+  text-align: center !important;
   
-  height:250px;
-  color:rgb(255, 255, 255);
-  font-size:3.5vw;
+  height:250px !important;
+  color:rgb(255, 255, 255) !important;
+  font-size:3.5vw !important;
   /* text-shadow: 1px 1px #ffffff, 
                      2px 2px #ffffff, 
                      3px 3px #ffffff; */
@@ -149,18 +149,18 @@ to {
                    6px 6px #003268;
     } */
     .outlinerz{
-        font-family: Arial;
-  color: white;
-        font-weight: bold;
+        font-family: Arial !important;
+  color: white !important;
+        font-weight: bold !important;
       
-        border-image: url("donut.png");
+        border-image: url("donut.png") !important;
      
-        border-image-width: 100px;
+        border-image-width: 100px !important;
   
     }
     .outlinerz:hover {
        
-        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -webkit-animation: glow 1s ease-in-out infinite alternate ;
         -moz-animation: glow 1s ease-in-out infinite alternate;
         animation: glow 1s ease-in-out infinite alternate;}
         @keyframes glow {

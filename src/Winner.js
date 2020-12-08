@@ -3,7 +3,7 @@ import useSound from "use-sound";
 
 import game from "./game.mp3";
 
-import "./Chop.css";
+import "./winner.css";
 
 function Winner(props) {
   const [play, { stop }] = useSound(game, { volume: 0.6 });
