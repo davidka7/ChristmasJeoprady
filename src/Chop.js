@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modals from "./Modals";
 import Emoji from "./Emoji";
 import Modals1 from "./Modals1";
-import Modals1 from "./Winner";
+import Winner from "./Winner";
 import { connect } from "react-redux";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
