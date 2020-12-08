@@ -25,7 +25,8 @@ import data4 from "./4.json";
 import data5 from "./5.json";
 import category from "./category.json";
 import last from "./last.json";
-function Chop({ points }) {
+import { c1 } from "./actions/dragger";
+function Chop({ points, c1 }) {
   // const [play] = useSound(jp);
   const [firstCheck, setFirstCheck] = useState(true);
   const [firstCheck1, setFirstCheck1] = useState(true);
@@ -109,6 +110,10 @@ function Chop({ points }) {
   if (points.checker == 54 && firstCheck1 == true) {
     setFirstCheck1(false);
   }
+  const handleSkip = () => {
+    c1();
+    changeTeam();
+  };
   return (
     <div className="full-size">
       {firstCheck ? (
@@ -691,24 +696,22 @@ function Chop({ points }) {
               </Card>
               <br />
               <br />
-              <Button>
-                <h1>
-                  Take It{" "}
-                  <Modals
-                    changeTeam={changeTeam}
-                    team1={team1}
-                    team2={team2}
-                    team3={team3}
-                    team4={team4}
-                    TeamPlaying={TeamPlaying}
-                    key
-                    data={last[switch1]}
-                  />
-                </h1>
-              </Button>
+              <h1>
+                Take It
+                <Modals
+                  changeTeam={changeTeam}
+                  team1={team1}
+                  team2={team2}
+                  team3={team3}
+                  team4={team4}
+                  TeamPlaying={TeamPlaying}
+                  key
+                  data={last[switch1]}
+                />
+              </h1>
               <br />
               <br />
-              <Button onClick={changeTeam}>
+              <Button onClick={handleSkip}>
                 <h1>Skip It</h1>
               </Button>
               <br />
@@ -757,9 +760,9 @@ function Chop({ points }) {
                 {points.reducers1 > points.reducers2 &&
                 points.reducers1 > points.reducers3 &&
                 points.reducers1 > points.reducers4 ? (
-                  <div>
-                    <h3> Team {team1}</h3>
-                    <br />
+                  <div className="glower">
+                    <h1 className="first-Click"> Team {team1}</h1>
+
                     {points.animal1}
                   </div>
                 ) : (
@@ -770,9 +773,9 @@ function Chop({ points }) {
                 {points.reducers2 > points.reducers4 &&
                 points.reducers2 > points.reducers1 &&
                 points.reducers2 > points.reducers3 ? (
-                  <div>
-                    <h3> Team {team2}</h3>
-                    <br />
+                  <div className="glower">
+                    <h1 className="first-Click"> Team {team2}</h1>
+
                     {points.animal2}
                   </div>
                 ) : (
@@ -783,9 +786,9 @@ function Chop({ points }) {
                 {points.reducers3 > points.reducers4 &&
                 points.reducers3 > points.reducers1 &&
                 points.reducers3 > points.reducers2 ? (
-                  <div>
-                    <h3> Team {team3}</h3>
-                    <br />
+                  <div className="glower">
+                    <h1 className="first-Click "> Team {team3}</h1>
+
                     {points.animal3}
                   </div>
                 ) : (
@@ -796,9 +799,9 @@ function Chop({ points }) {
                 {points.reducers4 > points.reducers1 &&
                 points.reducers4 > points.reducers2 &&
                 points.reducers4 > points.reducers3 ? (
-                  <div>
-                    <h3> Team {team4}</h3>
-                    <br />
+                  <div className="glower">
+                    <h1 className="first-Click"> Team {team4}</h1>
+
                     {points.animal4}
                   </div>
                 ) : (
@@ -815,5 +818,9 @@ function Chop({ points }) {
 const mapStateToProps = (store) => {
   return { points: store };
 };
-
-export default connect(mapStateToProps)(Chop);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    c1: () => c1(dispatch),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Chop);
