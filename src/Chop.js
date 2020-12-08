@@ -725,12 +725,7 @@ function Chop({ points, c1 }) {
               <br />
             </div>
           ) : (
-            <div
-              onMouseEnter={() => {
-                play3();
-              }}
-              onMouseLeave={() => {}}
-            >
+            <div>
               <CardDeck className="paddings max-height">
                 {" "}
                 <Card bg={"transparent"} className={`life${team1color}`}>
