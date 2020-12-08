@@ -24,3 +24,29 @@ export const reducer4 = (points, dispatch) => {
     payload: points,
   });
 };
+
+export const r1 = (animal, dispatch) => {
+  dispatch({
+    type: "animal1",
+    payload: animal,
+  });
+};
+
+export const r2 = (animal, dispatch) => {
+  dispatch({
+    type: "animal2",
+    payload: animal,
+  });
+};
+export const r3 = (animal, dispatch) => {
+  dispatch({
+    type: "animal3",
+    payload: animal,
+  });
+};
+export const r4 = (animal, dispatch) => {
+  dispatch({
+    type: "animal4",
+    payload: animal,
+  });
+};

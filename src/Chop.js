@@ -290,7 +290,7 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams1} className="maxer"></input>
                   </div>
                   <div>
@@ -323,8 +323,9 @@ function Chop({ points }) {
                     </label>
                     <br /> <br />
                     <label className="second-Click">
-                      Create Your <br /> <br /> Mascot: Click <br />
-                      <br /> <br /> <Emoji />
+                      Choose Your <br /> <br /> Mascot: Click one
+                      <br />
+                      <br /> <br /> <Emoji number={1} />
                     </label>
                   </div>
                 </Card.Body>
@@ -343,7 +344,7 @@ function Chop({ points }) {
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         value="secondary"
                         onClick={teamcolors2}
@@ -380,12 +381,12 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams2} className="maxer"></input>
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         value="secondary"
                         onClick={teamcolors2}
@@ -413,8 +414,8 @@ function Chop({ points }) {
                     </label>{" "}
                     <br /> <br />
                     <label className="second-Click">
-                      Create Your <br /> <br /> Mascot: Click <br /> <br />{" "}
-                      <br /> <Emoji />
+                      Choose Your <br /> <br /> Mascot: Click one
+                      <br /> <br /> <br /> <Emoji number={2} />
                     </label>
                   </div>
                 </Card.Body>
@@ -428,12 +429,12 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams3} className="maxer"></input>
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         onClick={teamcolors3}
                         value="secondary"
@@ -470,12 +471,12 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams3} className="maxer"></input>
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         onClick={teamcolors3}
                         value="secondary"
@@ -503,9 +504,9 @@ function Chop({ points }) {
                     </label>{" "}
                     <br /> <br />
                     <label className="second-Click">
-                      Create Your <br /> <br />
-                      Mascot: Click <br />
-                      <br /> <br /> <Emoji />
+                      Choose Your <br /> <br /> Mascot: Click one
+                      <br />
+                      <br /> <br /> <Emoji number={3} />
                     </label>
                   </div>
                 </Card.Body>
@@ -519,12 +520,12 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams4} className="maxer"></input>
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         onClick={teamcolors4}
                         value="secondary"
@@ -561,12 +562,12 @@ function Chop({ points }) {
                 {" "}
                 <Card.Body className="paddings1">
                   <div>
-                    <label className="second-Click">Teams Name:</label>
+                    <label className="second-Click">Team Name:</label>
                     <input onChange={teams4} className="maxer"></input>
                   </div>
                   <div>
                     <label className="second-Click">
-                      Teams Color:
+                      Team Color:
                       <Button
                         onClick={teamcolors4}
                         value="secondary"
@@ -594,8 +595,9 @@ function Chop({ points }) {
                     </label>{" "}
                     <br /> <br />
                     <label className="second-Click">
-                      Create Your <br /> <br /> Mascot: Click <br />
-                      <br /> <br /> <Emoji />
+                      Choose Your <br /> <br /> Mascot: Click one
+                      <br />
+                      <br /> <br /> <Emoji number={4} />
                     </label>
                   </div>
                 </Card.Body>
