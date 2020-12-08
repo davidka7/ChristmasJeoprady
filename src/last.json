@@ -10,8 +10,8 @@
      
     },
     {
-        "id": 1200,
-        "points": 100,
+        "id": 102,
+        "points": 1200,
         "question": "Does Santa think i68 is worthy of his presents",
         "answer": "yes",
         "background_image": 
@@ -20,8 +20,8 @@
        
       },
       {
-        "id": 1200,
-        "points": 100,
+        "id": 103,
+        "points": 1200,
         "question": "question",
         "answer": "answer",
         "background_image": 
@@ -30,8 +30,9 @@
        
       },
       {
-        "id": 1200,
-        "points": 100,
+        "id": 104,
+        "points": 1200,
+        
         "question": "question",
         "answer": "answer",
         "background_image": 

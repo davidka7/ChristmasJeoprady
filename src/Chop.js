@@ -28,13 +28,14 @@ import last from "./last.json";
 function Chop({ points }) {
   // const [play] = useSound(jp);
   const [firstCheck, setFirstCheck] = useState(true);
+  const [firstCheck1, setFirstCheck1] = useState(true);
   const [trueOrFalse, setTrueOrFalse] = useState(false);
   const [team1, setTeam1] = useState("");
   const [TeamPlaying, setTeamPlaying] = useState(" ");
   const [team2, setTeam2] = useState("");
   const [team3, setTeam3] = useState("");
   const [team4, setTeam4] = useState("");
-
+  const [switch1, setSwitch1] = useState(0);
   const [team1color, setTeam1color] = useState("light");
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
@@ -45,24 +46,29 @@ function Chop({ points }) {
     if (TeamPlaying == team1) {
       setTeamPlaying(team2);
       setCursor(points.animal2);
+      setSwitch1(1);
       // msg.text = `Team ${team2} Turn`;
       // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team2) {
       setTeamPlaying(team3);
       setCursor(points.animal3);
+      setSwitch1(2);
       // msg.text = `Team ${team3} Turn`;
       // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team3) {
       setTeamPlaying(team4);
       setCursor(points.animal4);
+      setSwitch1(3);
       // msg.text = `Team ${team4} Turn`;
       // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team4) {
       setTeamPlaying(team1);
       setCursor(points.animal1);
+      setSwitch1(0);
       // msg.text = `Team ${team1} Turn`;
       // window.speechSynthesis.speak(msg);
     } else {
+      setSwitch1(0);
       setTeamPlaying(team1);
       setCursor(points.animal1);
     }
@@ -99,6 +105,9 @@ function Chop({ points }) {
   console.log(points.checker);
   if (points.checker == 50 && firstCheck == true) {
     setFirstCheck(false);
+  }
+  if (points.checker == 54 && firstCheck1 == true) {
+    setFirstCheck1(false);
   }
   return (
     <div className="full-size">
@@ -667,40 +676,137 @@ function Chop({ points }) {
           )}
         </div>
       ) : (
-        <div class="bubbles  first-Click">
+        <div>
           {" "}
-          <h1>
-            Risk it???
-            <br /> Either you add a 1,200 <br />
-            or lose 800, up to you.
-          </h1>
-          <Card bg="transparent" className="special-font">
-            <span> {`Team ${TeamPlaying} Turn`}</span>
-          </Card>
-          <br />
-          <br />
-          <Button>
-            <h1>
-              Take It{" "}
-              <Modals
-                changeTeam={changeTeam}
-                team1={team1}
-                team2={team2}
-                team3={team3}
-                team4={team4}
-                TeamPlaying={TeamPlaying}
-                key
-                data={last[lastPlay]}
-              />
-            </h1>
-          </Button>
-          <br />
-          <br />
-          <Button onClick={changeTeam}>
-            <h1>Skip It</h1>
-          </Button>
-          <br />
-          <br />
+          {firstCheck1 ? (
+            <div class="bubbles  first-Click">
+              {" "}
+              <h1>
+                Risk it???
+                <br /> Either you add a 1,200 <br />
+                or lose 800, up to you.
+              </h1>
+              <Card bg="transparent" className="special-font">
+                <span> {`Team ${TeamPlaying} Turn`}</span>
+              </Card>
+              <br />
+              <br />
+              <Button>
+                <h1>
+                  Take It{" "}
+                  <Modals
+                    changeTeam={changeTeam}
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    team4={team4}
+                    TeamPlaying={TeamPlaying}
+                    key
+                    data={last[switch1]}
+                  />
+                </h1>
+              </Button>
+              <br />
+              <br />
+              <Button onClick={changeTeam}>
+                <h1>Skip It</h1>
+              </Button>
+              <br />
+              <br />
+            </div>
+          ) : (
+            <div>
+              <CardDeck className="paddings max-height">
+                {" "}
+                <Card bg={"transparent"} className={`life${team1color}`}>
+                  <Card.Title className="second-Click ">
+                    {" "}
+                    Team {team1}
+                  </Card.Title>
+                  <Card.Title className="second-Click">
+                    {" "}
+                    Points: {points.reducers1}
+                  </Card.Title>
+                </Card>
+                <Card bg={"transparent"} className={`life${team2color}`}>
+                  <Card.Title className="second-Click">Team {team2}</Card.Title>
+                  <Card.Title className="second-Click">
+                    {" "}
+                    Points: {points.reducers2}
+                  </Card.Title>
+                </Card>
+                <Card bg={"transparent"} className={`life${team3color}`}>
+                  <Card.Title className="second-Click">Team {team3}</Card.Title>
+                  <Card.Title className="second-Click">
+                    {" "}
+                    Points: {points.reducers3}
+                  </Card.Title>
+                </Card>
+                <Card bg={"transparent"} className={`life${team4color}`}>
+                  <Card.Title className="second-Click">Team {team4}</Card.Title>
+                  <Card.Title className="second-Click">
+                    {" "}
+                    Points: {points.reducers4}
+                  </Card.Title>
+                </Card>
+              </CardDeck>
+
+              <br />
+              <br />
+              <div className="Winner">
+                {points.reducers1 > points.reducers2 &&
+                points.reducers1 > points.reducers3 &&
+                points.reducers1 > points.reducers4 ? (
+                  <div>
+                    <h3> Team {team1}</h3>
+                    <br />
+                    {points.animal1}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+              <div className="Winner">
+                {points.reducers2 > points.reducers4 &&
+                points.reducers2 > points.reducers1 &&
+                points.reducers2 > points.reducers3 ? (
+                  <div>
+                    <h3> Team {team2}</h3>
+                    <br />
+                    {points.animal2}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+              <div className="Winner">
+                {points.reducers3 > points.reducers4 &&
+                points.reducers3 > points.reducers1 &&
+                points.reducers3 > points.reducers2 ? (
+                  <div>
+                    <h3> Team {team3}</h3>
+                    <br />
+                    {points.animal3}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+              <div className="Winner">
+                {points.reducers4 > points.reducers1 &&
+                points.reducers4 > points.reducers2 &&
+                points.reducers4 > points.reducers3 ? (
+                  <div>
+                    <h3> Team {team4}</h3>
+                    <br />
+                    {points.animal4}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            </div>
+          )}{" "}
         </div>
       )}
     </div>
