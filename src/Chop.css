@@ -8,6 +8,7 @@ justify-content: center;
 
 
 }
+
 .glower{
   background-color: transparent;
   
@@ -80,7 +81,15 @@ font-size:4vw;
               
 }
 
+.bubbles {
+  
+  background-image: url(water.png) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+ animation: water 40s infinite !important;
 
+}
 .bubbles h1{
   font-size:4vw !important;
   text-transform: uppercase;

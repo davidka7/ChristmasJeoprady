@@ -2,22 +2,15 @@ import React, { useState } from "react";
 import Modals from "./Modals";
 import Emoji from "./Emoji";
 import Modals1 from "./Modals1";
-
-// import useSound from "use-sound";
-
-// import $ from "jquery";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
+import Modals1 from "./Winner";
 import { connect } from "react-redux";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import Scrambler from "scrambling-text";
+
 import "./Chop.css";
 
-// import darkImage from "./dark1.jpg";
 import data1 from "./1.json";
 import data2 from "./2.json";
 import data3 from "./3.json";
@@ -26,8 +19,14 @@ import data5 from "./5.json";
 import category from "./category.json";
 import last from "./last.json";
 import { c1 } from "./actions/dragger";
+import useSound from "use-sound";
+
+import best from "./best.mp3";
+import among from "./among.mp3";
 function Chop({ points, c1 }) {
-  // const [play] = useSound(jp);
+  const [play] = useSound(best);
+  const [play1, { stop }] = useSound(among, { volume: 0.6 });
+
   const [firstCheck, setFirstCheck] = useState(true);
   const [firstCheck1, setFirstCheck1] = useState(true);
   const [trueOrFalse, setTrueOrFalse] = useState(false);
@@ -48,26 +47,18 @@ function Chop({ points, c1 }) {
       setTeamPlaying(team2);
       setCursor(points.animal2);
       setSwitch1(1);
-      // msg.text = `Team ${team2} Turn`;
-      // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team2) {
       setTeamPlaying(team3);
       setCursor(points.animal3);
       setSwitch1(2);
-      // msg.text = `Team ${team3} Turn`;
-      // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team3) {
       setTeamPlaying(team4);
       setCursor(points.animal4);
       setSwitch1(3);
-      // msg.text = `Team ${team4} Turn`;
-      // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team4) {
       setTeamPlaying(team1);
       setCursor(points.animal1);
       setSwitch1(0);
-      // msg.text = `Team ${team1} Turn`;
-      // window.speechSynthesis.speak(msg);
     } else {
       setSwitch1(0);
       setTeamPlaying(team1);
@@ -114,8 +105,16 @@ function Chop({ points, c1 }) {
     c1();
     changeTeam();
   };
+  const handleMusic = () => {
+    play();
+  };
+  // const sound = new BeatBeat(new AudioContext(), "best.mp3");
+  // sound.load();
   return (
     <div className="full-size">
+      {/* {sound.play(() =>
+        console.log("This callback will execute at every beat of the song")
+      )} */}
       {firstCheck ? (
         <div>
           {trueOrFalse ? (
@@ -267,7 +266,7 @@ function Chop({ points, c1 }) {
             <div className="first-Click">
               <div class="bubbles  first-Click">
                 {" "}
-                <h1>Name Your Teams</h1>
+                <h1 onClick={handleMusic}>Name Your Teams</h1>
               </div>
 
               <CardDeck className="paddings">
@@ -695,30 +694,43 @@ function Chop({ points, c1 }) {
                 <span> {`Team ${TeamPlaying} Turn`}</span>
               </Card>
               <br />
-              <br />
               <h1>
                 Take It
-                <Modals
-                  changeTeam={changeTeam}
-                  team1={team1}
-                  team2={team2}
-                  team3={team3}
-                  team4={team4}
-                  TeamPlaying={TeamPlaying}
-                  key
-                  data={last[switch1]}
-                />
+                <div className="Winner">
+                  <Modals
+                    changeTeam={changeTeam}
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    team4={team4}
+                    TeamPlaying={TeamPlaying}
+                    key
+                    data={last[switch1]}
+                  />
+                </div>
               </h1>
               <br />
-              <br />
-              <Button onClick={handleSkip}>
+              <Button
+                onMouseEnter={() => {
+                  play1();
+                }}
+                onMouseLeave={() => {
+                  stop();
+                }}
+                onClick={handleSkip}
+              >
                 <h1>Skip It</h1>
               </Button>
               <br />
               <br />
             </div>
           ) : (
-            <div>
+            <div
+              onMouseEnter={() => {
+                play3();
+              }}
+              onMouseLeave={() => {}}
+            >
               <CardDeck className="paddings max-height">
                 {" "}
                 <Card bg={"transparent"} className={`life${team1color}`}>
@@ -762,8 +774,7 @@ function Chop({ points, c1 }) {
                 points.reducers1 > points.reducers4 ? (
                   <div className="glower">
                     <h1 className="first-Click"> Team {team1}</h1>
-
-                    {points.animal1}
+                    <Winner animal={points.animal1} />
                   </div>
                 ) : (
                   <div></div>
@@ -775,8 +786,7 @@ function Chop({ points, c1 }) {
                 points.reducers2 > points.reducers3 ? (
                   <div className="glower">
                     <h1 className="first-Click"> Team {team2}</h1>
-
-                    {points.animal2}
+                    <Winner animal={points.animal2} />
                   </div>
                 ) : (
                   <div></div>
@@ -789,7 +799,7 @@ function Chop({ points, c1 }) {
                   <div className="glower">
                     <h1 className="first-Click "> Team {team3}</h1>
 
-                    {points.animal3}
+                    <Winner animal={points.animal3} />
                   </div>
                 ) : (
                   <div></div>
@@ -802,7 +812,7 @@ function Chop({ points, c1 }) {
                   <div className="glower">
                     <h1 className="first-Click"> Team {team4}</h1>
 
-                    {points.animal4}
+                    <Winner animal={points.animal4} />
                   </div>
                 ) : (
                   <div></div>
