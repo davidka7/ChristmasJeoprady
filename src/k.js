@@ -6,8 +6,8 @@ function mathSolver(x) {
 
   function newLoop(string) {
     if (
-      numArray.includes(string[0]) == false ||
-      numArray.includes(string[string.length - 1]) == false
+      numArray1.includes(string[0]) == false ||
+      numArray1.includes(string[string.length - 1]) == false
     ) {
       error = `Invalid Regular Expression`;
       return true;
@@ -29,7 +29,7 @@ function mathSolver(x) {
         string[i - 1] == "%" ||
         string[i - 1] == "^" ||
         string[i - 1] == "(" ||
-        string[i - 1] == ")";
+        string[i + 1] == ")";
 
       if (numArray.includes(string[i]) == true) {
         if (string[i - 1] == ")" || string[i + 1] == "(") {
@@ -62,6 +62,6 @@ function mathSolver(x) {
   }
 }
 
-const string = "1+/1";
+const string = "144+4/1*(7)";
 
 mathSolver(string);
