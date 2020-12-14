@@ -64,4 +64,4 @@ function mathSolver(x) {
 
 const string = "144+4/1*(7)";
 
-mathSolver(string);
+module.exports = mathSolver
