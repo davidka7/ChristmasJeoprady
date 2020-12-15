@@ -78,25 +78,5 @@
         ""
       
        
-      },
-      {
-        "id": 9,
-        "points": 100,
-        "question": "question",
-        "answer": "answer",
-        "background_image": 
-        ""
-      
-       
-      },
-      {
-        "id": 10,
-        "points": 100,
-        "question": "question",
-        "answer": "answer",
-        "background_image": 
-        ""
-      
-       
       }
 ]

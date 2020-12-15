@@ -73,23 +73,5 @@
                                                         ""
                                                         
                                                         
-                                                            },
-                                                            {
-                                                                "id":29,
-                                                                "points": 300, "question": "question",
-                                                                "answer": "answer",
-                                                                "background_image": 
-                                                                ""
-                                                                
-                                                                
-                                                                    },
-                                                                    {
-                                                                        "id":30,
-                                                                        "points": 300, "question": "question",
-                                                                        "answer": "answer",
-                                                                        "background_image": 
-                                                                        ""
-                                                                        
-                                                                        
-                                                                            }
+                                                            }
 ]

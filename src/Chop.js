@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modals from "./Modals";
+import SpecialModal from "./SpecialModal";
 import Emoji from "./Emoji";
 import Modals1 from "./Modals1";
 import Winner from "./Winner";
@@ -95,10 +96,10 @@ function Chop({ points, c1 }) {
     setTeam4color(e.target.value);
   };
   console.log(points.checker);
-  if (points.checker == 50 && firstCheck == true) {
+  if (points.checker == 40 && firstCheck == true) {
     setFirstCheck(false);
   }
-  if (points.checker == 54 && firstCheck1 == true) {
+  if (points.checker == 44 && firstCheck1 == true) {
     setFirstCheck1(false);
   }
   const handleSkip = () => {
@@ -179,7 +180,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data1.map((data) => {
                     return (
-                      <Modals
+                      <SpecialModal
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -196,7 +197,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data2.map((data) => {
                     return (
-                      <Modals
+                      <SpecialModal
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -213,7 +214,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data3.map((data) => {
                     return (
-                      <Modals
+                      <SpecialModal
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -230,7 +231,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data4.map((data) => {
                     return (
-                      <Modals
+                      <SpecialModal
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -247,7 +248,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data5.map((data) => {
                     return (
-                      <Modals
+                      <SpecialModal
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}

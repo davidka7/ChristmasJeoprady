@@ -1,9 +1,12 @@
 body {
-    background-image:url('dark.jpg');
-    background-size:cover;
-    /* background-repeat: no-repeat; */
-   
-   }
+ 
+   background-image: url("StarfieldSimulation.gif 16-12-04-872.gif");
+   background-position: right bottom, left top;
+   background-size:cover;
+   /* background-repeat: no-repeat; */
+  
+  }
+  
    .full-size{
 width:100%;
 height:100%;

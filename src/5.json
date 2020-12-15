@@ -68,23 +68,6 @@
                                                                         ""
                                                                         
                                                                         
-                                                                            }, {
-                                                                                "id":49,
-                                                                                "points": 500, "question": "question",
-                                                                                "answer": "answer",
-                                                                                "background_image": 
-                                                                                ""
-                                                                                
-                                                                                
-                                                                                    },
-                                                                                    {
-                                                                                        "id":50,
-                                                                                        "points": 500, "question": "question",
-                                                                                        "answer": "answer",
-                                                                                        "background_image": 
-                                                                                        ""
-                                                                                        
-                                                                                        
-                                                                                            }
+                                                                            }
                                                                                            
                                                                                                  ]

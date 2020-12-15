@@ -63,20 +63,4 @@
         "background_image": 
         ""
        
-      },
-      {
-        "id": 19,
-        "points": 200, "question": "question",
-        "answer": "answer",
-        "background_image": 
-        ""
-       
-      },
-      {
-        "id": 20,
-        "points": 200, "question": "question",
-        "answer": "answer",
-        "background_image": 
-        ""
-       
       }]
