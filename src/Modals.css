@@ -86,7 +86,7 @@ justify-content: space-around;
   max-height: 90px !important; 
   max-width:130px !important ;
   /* box-shadow: 0 0 0 10px rgb(211, 211, 255) !important; */
-  outline: dashed 10px #2effea !important;
+  /* outline: dashed 10px #2effea !important; */
 
 }
 .no-wrapper{

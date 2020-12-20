@@ -159,34 +159,62 @@ function SpecialModal({
           <div className="spaceside">
             <div className="spaceit">
               {" "}
-              <Button onClick={handleTeam1} variant="white">
+              <Button onClick={handleTeam1} variant="outline-secondary">
                 {team1}
               </Button>
             </div>
             <div className="spaceit">
               {" "}
-              <Button onClick={handleTeam2} variant="white">
+              <Button onClick={handleTeam2} variant="outline-secondary">
                 {team2}
               </Button>
             </div>{" "}
             <div className="spaceit">
               {" "}
-              <Button onClick={handleTeam3} variant="white">
+              <Button onClick={handleTeam3} variant="outline-secondary">
                 {team3}
               </Button>
             </div>{" "}
             <div className="spaceit">
               {" "}
-              <Button onClick={handleTeam4} variant="white">
+              <Button onClick={handleTeam4} variant="outline-secondary">
                 {team4}
               </Button>
             </div>
           </div>
           <br />
-          <div>
-            <Button variant="dark">-{points / 2}</Button>{" "}
-            <Button variant="dark">+{points}</Button>{" "}
-          </div>
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <Button variant="dark">-{points / 2}</Button> <br />
+          <div> </div>
+          <br />
+          <div> </div>
+          <br />
+          <Button variant="dark">+{points}</Button> <div> </div>
+          <br />
+          <div> </div>
+          <br />
           <Button variant="primary" onClick={handleClose}>
             <div onClick={handlePress}>Close</div>
           </Button>
