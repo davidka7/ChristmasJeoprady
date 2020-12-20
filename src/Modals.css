@@ -3,6 +3,7 @@
     background-size: 900px 1120px;
 
 }
+
 .hover1 {
     display: block;
    
@@ -69,20 +70,24 @@ justify-content: space-around;
     max-width:130px !important 
 }
 .z200-size{
-    max-height: 94px !important; 
-    max-width:150px !important
+  max-height: 90px !important; 
+  max-width:130px !important 
 }
 .z300-size{
-    max-height: 98px !important; 
-    max-width:180px !important
+  max-height: 90px !important; 
+  max-width:130px !important 
 }
 .z400-size{
-    max-height: 101px !important; 
-    max-width:240px !important
+  max-height: 90px !important; 
+  max-width:130px !important ;
+  
 }
 .z500-size{
-    max-height: 105px !important; 
-    max-width:280px !important 
+  max-height: 90px !important; 
+  max-width:130px !important ;
+  /* box-shadow: 0 0 0 10px rgb(211, 211, 255) !important; */
+  outline: dashed 10px #2effea !important;
+
 }
 .no-wrapper{
 
@@ -90,3 +95,18 @@ justify-content: space-around;
  text-align: center ;
 
 }
+.spaceit{
+font-size:2vw;
+text-align:center;
+display: flex;
+/* justify-content: space-around; */
+flex-direction: row;
+
+}
+/* .spaceside{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+
+} */

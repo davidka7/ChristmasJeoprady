@@ -16,7 +16,6 @@ function SpecialModal({
   team2,
   team3,
   team4,
-  TeamPlaying,
   data,
   reducer1,
   reducer2,
@@ -27,104 +26,115 @@ function SpecialModal({
   const [play] = useSound(boopSfx);
   const [play1] = useSound(yes);
   const [show, setShow] = useState(false);
-  const [tries, setTries] = useState(2);
-
+  const [tries, setTries] = useState(1);
+  const [value, setValue] = useState("Reveal");
+  const [teamPoints, setTeamPoints] = useState("");
   const [points] = useState(data.points);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [newValue, setNewValue] = useState("");
-  const handleValue = (e) => {
-    setNewValue(e.target.value);
-  };
-  const handleSubmit = (e) => {
-    changeTeam();
-    if (data.points !== 1200) {
-      if (data.answer === newValue) {
-        setTries(0);
-        play1();
-        handlePress();
-        if (TeamPlaying === team1) {
-          e.persist();
 
-          reducer1(data.points);
-        } else if (TeamPlaying === team2) {
-          e.persist();
-          reducer2(data.points);
-        } else if (TeamPlaying === team3) {
-          e.persist();
-          reducer3(data.points);
-        } else if (TeamPlaying === team4) {
-          e.persist();
-          reducer4(data.points);
-        }
-      } else {
-        {
-          play();
-          if (tries == 1) {
-            handlePress();
-          }
-          setTries(tries - 1);
-        }
-      }
-    } else {
-      if (data.answer === newValue) {
-        play1();
-        handlePress();
-        if (TeamPlaying === team1) {
-          e.persist();
+  // const handleSubmit = (e) => {
+  //   changeTeam();
+  //   if (data.points !== 1200) {
+  //     if (data.answer === newValue) {
+  //       setTries(0);
+  //       play1();
+  //       handlePress();
+  //       if (TeamPlaying === team1) {
+  //         e.persist();
 
-          reducer1(data.points);
-        } else if (TeamPlaying === team2) {
-          e.persist();
-          reducer2(data.points);
-        } else if (TeamPlaying === team3) {
-          e.persist();
-          reducer3(data.points);
-        } else if (TeamPlaying === team4) {
-          e.persist();
-          reducer4(data.points);
-        }
-      } else {
-        {
-          play();
+  //         reducer1(data.points);
+  //       } else if (TeamPlaying === team2) {
+  //         e.persist();
+  //         reducer2(data.points);
+  //       } else if (TeamPlaying === team3) {
+  //         e.persist();
+  //         reducer3(data.points);
+  //       } else if (TeamPlaying === team4) {
+  //         e.persist();
+  //         reducer4(data.points);
+  //       }
+  //     } else {
+  //       {
+  //         play();
+  //         if (tries == 1) {
+  //           handlePress();
+  //         }
+  //         setTries(tries - 1);
+  //       }
+  //     }
+  //   } else {
+  //     if (data.answer === newValue) {
+  //       play1();
+  //       handlePress();
+  //       if (TeamPlaying === team1) {
+  //         e.persist();
 
-          handlePress();
-          if (TeamPlaying === team1) {
-            e.persist();
+  //         reducer1(data.points);
+  //       } else if (TeamPlaying === team2) {
+  //         e.persist();
+  //         reducer2(data.points);
+  //       } else if (TeamPlaying === team3) {
+  //         e.persist();
+  //         reducer3(data.points);
+  //       } else if (TeamPlaying === team4) {
+  //         e.persist();
+  //         reducer4(data.points);
+  //       }
+  //     } else {
+  //       {
+  //         play();
 
-            reducer1(-800);
-          } else if (TeamPlaying === team2) {
-            e.persist(-800);
-            reducer2(data.points);
-          } else if (TeamPlaying === team3) {
-            e.persist(-800);
-            reducer3(data.points);
-          } else if (TeamPlaying === team4) {
-            e.persist(-800);
-            reducer4(data.points);
-          }
-        }
-      }
-    }
-  };
+  //         handlePress();
+  //         if (TeamPlaying === team1) {
+  //           e.persist();
+
+  //           reducer1(-800);
+  //         } else if (TeamPlaying === team2) {
+  //           e.persist(-800);
+  //           reducer2(data.points);
+  //         } else if (TeamPlaying === team3) {
+  //           e.persist(-800);
+  //           reducer3(data.points);
+  //         } else if (TeamPlaying === team4) {
+  //           e.persist(-800);
+  //           reducer4(data.points);
+  //         }
+  //       }
+  //     }
+  //   }
+  // };
   const handlePress = () => {
+    setTries(0);
     c1();
+  };
+  const handleValue = () => {
+    setValue(data.answer);
+  };
+  const handleTeam1 = () => {
+    setTeamPoints(team1);
+  };
+  const handleTeam2 = () => {
+    setTeamPoints(team2);
+  };
+  const handleTeam3 = () => {
+    setTeamPoints(team3);
+  };
+  const handleTeam4 = () => {
+    setTeamPoints(team4);
   };
   return (
     <>
       {tries !== 0 ? (
-        <Card className={`outliners z100-size hover1`} onClick={handleShow}>
+        <Card
+          className={`outliners z${points}-size hover1`}
+          onClick={handleShow}
+        >
           <Card.Title className="fonty hover2">{data.points}</Card.Title>
-
-          <small bg="dark" className="text-muted no-wrapper hover2">
-            {tries} Tries
-          </small>
         </Card>
       ) : (
         <Card className={`outliners z${points}-size`} bg="transparent">
-          <Card.Title className="fonty">{data.answer}</Card.Title>
-
           <small bg="dark" className="text-muted no-wrapper">
             Complete
           </small>
@@ -138,18 +148,48 @@ function SpecialModal({
         show={show}
         onHide={handleClose}
       >
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>{data.question}</Modal.Title>
         </Modal.Header>
         <Modal.Body className="fonty">
-          <input onChange={handleValue}></input>
+          {" "}
+          <div onClick={handleValue}>{value}</div>
         </Modal.Body>
         <Modal.Footer>
-          <div onClick={handleSubmit}>
-            <Button variant="primary" onClick={handleClose}>
-              Check Answer
-            </Button>
+          <div className="spaceside">
+            <div className="spaceit">
+              {" "}
+              <Button onClick={handleTeam1} variant="white">
+                {team1}
+              </Button>
+            </div>
+            <div className="spaceit">
+              {" "}
+              <Button onClick={handleTeam2} variant="white">
+                {team2}
+              </Button>
+            </div>{" "}
+            <div className="spaceit">
+              {" "}
+              <Button onClick={handleTeam3} variant="white">
+                {team3}
+              </Button>
+            </div>{" "}
+            <div className="spaceit">
+              {" "}
+              <Button onClick={handleTeam4} variant="white">
+                {team4}
+              </Button>
+            </div>
           </div>
+          <br />
+          <div>
+            <Button variant="dark">-{points / 2}</Button>{" "}
+            <Button variant="dark">+{points}</Button>{" "}
+          </div>
+          <Button variant="primary" onClick={handleClose}>
+            <div onClick={handlePress}>Close</div>
+          </Button>
         </Modal.Footer>
       </Modal>{" "}
     </>

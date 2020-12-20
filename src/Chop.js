@@ -164,7 +164,7 @@ function Chop({ points, c1 }) {
                 </CardDeck>
                 <CardDeck className="paddings">
                   <Card bg="transparent" className="special-font">
-                    <span> {`Team ${TeamPlaying} Turn`}</span>
+                    <span> {`Team ${TeamPlaying} Chooses Question`}</span>
                   </Card>
                   <br />
                   <br />

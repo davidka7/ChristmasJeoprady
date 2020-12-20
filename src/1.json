@@ -12,7 +12,7 @@
     {
         "id": 2,
         "points": 100,
-        "question": "Does Santa think i68 is worthy of his presents",
+        "question": "Does Santa think i68 is worthy of his presents?",
         "answer": "yes",
         "background_image": 
         "https://i.pinimg.com/originals/c2/e6/55/c2e655256db995ffac7d560921869be9.jpg"
@@ -22,8 +22,8 @@
       {
         "id": 3,
         "points": 100,
-        "question": "question",
-        "answer": "answer",
+        "question": "Who steals food at applebees?",
+        "answer": "danik",
         "background_image": 
         ""
       
