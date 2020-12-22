@@ -149,75 +149,33 @@ function SpecialModal({
         onHide={handleClose}
       >
         <Modal.Header>
-          <Modal.Title>{data.question}</Modal.Title>
+          <Modal.Title>{data.question}</Modal.Title>{" "}
+          <Button variant="primary" onClick={handleClose}>
+            <div onClick={handlePress}>X</div>
+          </Button>
         </Modal.Header>
         <Modal.Body className="fonty">
           {" "}
           <div onClick={handleValue}>{value}</div>
         </Modal.Body>
         <Modal.Footer>
+          {data.id == 3 ? <img src=""></img> : <div></div>}
           <div className="spaceside">
-            <div className="spaceit">
-              {" "}
-              <Button onClick={handleTeam1} variant="outline-secondary">
-                {team1}
-              </Button>
-            </div>
-            <div className="spaceit">
-              {" "}
-              <Button onClick={handleTeam2} variant="outline-secondary">
-                {team2}
-              </Button>
-            </div>{" "}
-            <div className="spaceit">
-              {" "}
-              <Button onClick={handleTeam3} variant="outline-secondary">
-                {team3}
-              </Button>
-            </div>{" "}
-            <div className="spaceit">
-              {" "}
-              <Button onClick={handleTeam4} variant="outline-secondary">
-                {team4}
-              </Button>
-            </div>
+            <Button onClick={handleTeam1} variant="outline-secondary">
+              {team1}
+            </Button>
+            <Button onClick={handleTeam2} variant="outline-secondary">
+              {team2}
+            </Button>
+            <Button onClick={handleTeam3} variant="outline-secondary">
+              {team3}
+            </Button>
+            <Button onClick={handleTeam4} variant="outline-secondary">
+              {team4}
+            </Button>
           </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <Button variant="dark">-{points / 2}</Button> <br />
-          <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <Button variant="dark">+{points}</Button> <div> </div>
-          <br />
-          <div> </div>
-          <br />
-          <Button variant="primary" onClick={handleClose}>
-            <div onClick={handlePress}>Close</div>
-          </Button>
+          <Button variant="dark">-{points / 2}</Button>
+          <Button variant="dark">+{points}</Button>
         </Modal.Footer>
       </Modal>{" "}
     </>

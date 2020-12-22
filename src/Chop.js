@@ -96,10 +96,10 @@ function Chop({ points, c1 }) {
     setTeam4color(e.target.value);
   };
   console.log(points.checker);
-  if (points.checker == 40 && firstCheck == true) {
+  if (points.checker == 35 && firstCheck == true) {
     setFirstCheck(false);
   }
-  if (points.checker == 44 && firstCheck1 == true) {
+  if (points.checker == 39 && firstCheck1 == true) {
     setFirstCheck1(false);
   }
   const handleSkip = () => {
@@ -164,7 +164,7 @@ function Chop({ points, c1 }) {
                 </CardDeck>
                 <CardDeck className="paddings">
                   <Card bg="transparent" className="special-font">
-                    <span> {`Team ${TeamPlaying} Chooses Question`}</span>
+                    <span> {`Team ${TeamPlaying} Turn`}</span>
                   </Card>
                   <br />
                   <br />

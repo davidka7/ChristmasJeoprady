@@ -1,6 +1,7 @@
 body {
  
-   background-image: url("StarfieldSimulation.gif 16-12-04-872.gif");
+   /* background-image: url("StarfieldSimulation.gif 16-12-04-872.gif"); */
+    background-image: url("vv.png");
    background-position: right bottom, left top;
    background-size:cover;
    /* background-repeat: no-repeat; */

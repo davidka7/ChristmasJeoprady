@@ -1,7 +1,7 @@
 [
     
     {
-"id":21,
+"id":1,
 "points": 300, "question": "question",
 "answer": "answer",
 "background_image": 
@@ -11,7 +11,7 @@
     },
 
     {
-        "id":22,
+        "id":2,
         "points": 300, "question": "question",
         "answer": "answer",
         "background_image": 
@@ -20,7 +20,7 @@
         
             },
             {
-                "id":23,
+                "id":3,
                 "points": 300, "question": "question",
                 "answer": "answer",
                 "background_image": 
@@ -30,7 +30,7 @@
                     },
 
                     {
-                        "id":24,
+                        "id":4,
                         "points": 300, "question": "question",
                         "answer": "answer",
                         "background_image": 
@@ -39,7 +39,7 @@
                         
                             },
                             {
-                                "id":25,
+                                "id":5,
                                 "points": 300, "question": "question",
                                 "answer": "answer",
                                 "background_image": 
@@ -48,21 +48,12 @@
                                 
                                     },
                                     {
-                                        "id":26,
+                                        "id":6,
                                         "points": 300, "question": "question",
                                         "answer": "answer",
                                         "background_image": 
                                         ""
                                         
                                         
-                                            },
-                                            {
-                                                "id":27,
-                                                "points": 300, "question": "question",
-                                                "answer": "answer",
-                                                "background_image": 
-                                                ""
-                                                
-                                                
-                                                    }
+                                            }
 ]

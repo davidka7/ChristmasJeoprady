@@ -1,23 +1,20 @@
 [
     {
         "id":61,
-      "category": "Animals"
+      "category": "i68 history"
       },
     {
-        "id":62, "category": "Biblical"},
+        "id":62, "category": "Bible Theology"},
       {
-        "id":63,"category": "I68"},
+        "id":63,"category": "Twitter Feed"},
       
       {
-        "id":66,"category": "Girls & Boys"},
+        "id":66,"category": "Count It"},
       {
-        "id":67,"category": "Denis"},
+        "id":67,"category": "Denis Facts"},
       
       {
-        "id":69,"category": "Random"
+        "id":69,"category": "IQ 200"
        
-      },
-      {
-        "id":70, "category": "Random2"  
       }
 ]

@@ -98,15 +98,13 @@ justify-content: space-around;
 .spaceit{
 font-size:2vw;
 text-align:center;
-display: flex;
+
 /* justify-content: space-around; */
-flex-direction: row;
+/* flex-direction: column; */
 
 }
-/* .spaceside{
+.spaceside{
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-
-
-} */
+}

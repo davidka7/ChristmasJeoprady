@@ -1,6 +1,6 @@
 [
     {
-      "id": 11,
+      "id": 1,
       "points": 200, "question": "After seeing this, do you believe in angels?",
       "answer": "yes",
       "background_image": 
@@ -8,7 +8,7 @@
      
     },
     {
-        "id": 12,
+        "id": 2,
         "points": 200, "question": "question",
         "answer": "answer",
         "background_image": 
@@ -16,7 +16,7 @@
        
       },
       {
-        "id": 13,
+        "id": 3,
         "points": 200, "question": "question",
         "answer": "answer",
         "background_image": 
@@ -24,7 +24,7 @@
        
       },
       {
-        "id": 14,
+        "id": 4,
         "points": 200, "question": "question",
         "answer": "answer",
         "background_image": 
@@ -33,7 +33,7 @@
       },
      
       {
-        "id": 15,
+        "id": 5,
         "points": 200, "question": "question",
         "answer": "answer",
         "background_image": 
@@ -41,15 +41,7 @@
        
       },
       {
-        "id": 16,
-        "points": 200, "question": "question",
-        "answer": "answer",
-        "background_image": 
-        ""
-       
-      },
-      {
-        "id": 17,
+        "id": 6,
         "points": 200, "question": "question",
         "answer": "answer",
         "background_image": 
