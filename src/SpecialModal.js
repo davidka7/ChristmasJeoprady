@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
 import { reducer1, reducer2, reducer3, reducer4, c1 } from "./actions/dragger";
 import useSound from "use-sound";
-
+import Bungs from "./Bungs";
 import boopSfx from "./error.wav";
 import yes from "./yes.mp3";
 import "./Modals.css";
@@ -30,81 +30,12 @@ function SpecialModal({
   const [value, setValue] = useState("Reveal");
   const [teamPoints, setTeamPoints] = useState("");
   const [points] = useState(data.points);
-
+  const [familyDispute, setFamilyDispute] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  // const handleSubmit = (e) => {
-  //   changeTeam();
-  //   if (data.points !== 1200) {
-  //     if (data.answer === newValue) {
-  //       setTries(0);
-  //       play1();
-  //       handlePress();
-  //       if (TeamPlaying === team1) {
-  //         e.persist();
-
-  //         reducer1(data.points);
-  //       } else if (TeamPlaying === team2) {
-  //         e.persist();
-  //         reducer2(data.points);
-  //       } else if (TeamPlaying === team3) {
-  //         e.persist();
-  //         reducer3(data.points);
-  //       } else if (TeamPlaying === team4) {
-  //         e.persist();
-  //         reducer4(data.points);
-  //       }
-  //     } else {
-  //       {
-  //         play();
-  //         if (tries == 1) {
-  //           handlePress();
-  //         }
-  //         setTries(tries - 1);
-  //       }
-  //     }
-  //   } else {
-  //     if (data.answer === newValue) {
-  //       play1();
-  //       handlePress();
-  //       if (TeamPlaying === team1) {
-  //         e.persist();
-
-  //         reducer1(data.points);
-  //       } else if (TeamPlaying === team2) {
-  //         e.persist();
-  //         reducer2(data.points);
-  //       } else if (TeamPlaying === team3) {
-  //         e.persist();
-  //         reducer3(data.points);
-  //       } else if (TeamPlaying === team4) {
-  //         e.persist();
-  //         reducer4(data.points);
-  //       }
-  //     } else {
-  //       {
-  //         play();
-
-  //         handlePress();
-  //         if (TeamPlaying === team1) {
-  //           e.persist();
-
-  //           reducer1(-800);
-  //         } else if (TeamPlaying === team2) {
-  //           e.persist(-800);
-  //           reducer2(data.points);
-  //         } else if (TeamPlaying === team3) {
-  //           e.persist(-800);
-  //           reducer3(data.points);
-  //         } else if (TeamPlaying === team4) {
-  //           e.persist(-800);
-  //           reducer4(data.points);
-  //         }
-  //       }
-  //     }
-  //   }
-  // };
+  const openDiv = () => {
+    setFamilyDispute(true);
+  };
   const handlePress = () => {
     setTries(0);
     c1();
@@ -124,6 +55,7 @@ function SpecialModal({
   const handleTeam4 = () => {
     setTeamPoints(team4);
   };
+
   return (
     <>
       {tries !== 0 ? (
@@ -151,7 +83,7 @@ function SpecialModal({
         <Modal.Header>
           <Modal.Title>{data.question}</Modal.Title>{" "}
           <Button variant="primary" onClick={handleClose}>
-            <div onClick={handlePress}>X</div>
+            <div onClick={handlePress}> X</div>
           </Button>
         </Modal.Header>
         <Modal.Body className="fonty">
@@ -166,16 +98,26 @@ function SpecialModal({
             </Button>
             <Button onClick={handleTeam2} variant="outline-secondary">
               {team2}
-            </Button>
+            </Button>{" "}
+            <br />
             <Button onClick={handleTeam3} variant="outline-secondary">
               {team3}
             </Button>
             <Button onClick={handleTeam4} variant="outline-secondary">
               {team4}
             </Button>
+            <br />
           </div>
+          <div>
+            <label>First Answer</label> <input></input>
+          </div>
+          {familyDispute == true ? <Bungs /> : <div></div>}
           <Button variant="dark">-{points / 2}</Button>
           <Button variant="dark">+{points}</Button>
+          <Button onClick={openDiv} variant="secondary">
+            Family Dispute?
+          </Button>
+          <br />
         </Modal.Footer>
       </Modal>{" "}
     </>

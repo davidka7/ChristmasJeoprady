@@ -96,10 +96,10 @@ function Chop({ points, c1 }) {
     setTeam4color(e.target.value);
   };
   console.log(points.checker);
-  if (points.checker == 35 && firstCheck == true) {
+  if (points.checker == 30 && firstCheck == true) {
     setFirstCheck(false);
   }
-  if (points.checker == 39 && firstCheck1 == true) {
+  if (points.checker == 34 && firstCheck1 == true) {
     setFirstCheck1(false);
   }
   const handleSkip = () => {
