@@ -81,7 +81,7 @@ function Emoji({ r1, r2, r3, r4, number }) {
           <button onClick={animal3} className="back">
             🎁
           </button>
-          <br /> <br />
+          <br />
           <button onClick={animal4} className="back">
             🎁
           </button>{" "}
@@ -91,7 +91,6 @@ function Emoji({ r1, r2, r3, r4, number }) {
           <button onClick={animal6} className="back">
             🎁
           </button>{" "}
-          <br />
           <br />
           <button onClick={animal7} className="back">
             🎁
