@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Modals from "./Modals";
 import SpecialModal from "./SpecialModal";
+import SpecialModal2 from "./SpecialModal2";
+import SpecialModal34 from "./SpecialModal34";
+import SpecialModal5 from "./SpecialModal5";
+
 import Emoji from "./Emoji";
 import Modals1 from "./Modals1";
 import Winner from "./Winner";
@@ -166,7 +170,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data1.map((data) => {
                     return (
-                      <SpecialModal
+                      <SpecialModal34
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -183,7 +187,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data2.map((data) => {
                     return (
-                      <SpecialModal
+                      <SpecialModal34
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -200,7 +204,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data3.map((data) => {
                     return (
-                      <SpecialModal
+                      <SpecialModal34
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -217,7 +221,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data4.map((data) => {
                     return (
-                      <SpecialModal
+                      <SpecialModal34
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}
@@ -234,7 +238,7 @@ function Chop({ points, c1 }) {
                 <CardDeck className="paddings">
                   {data5.map((data) => {
                     return (
-                      <SpecialModal
+                      <SpecialModal34
                         changeTeam={changeTeam}
                         team1={team1}
                         team2={team2}

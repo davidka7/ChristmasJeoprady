@@ -6,7 +6,7 @@
         "answer": "answer",
         "background_image": 
         ""
-        
+        ,"category":4,"part":1
         
             },
 
@@ -16,7 +16,7 @@
         "answer": "answer",
         "background_image": 
         ""
-        
+        ,"category":4,"part":2
         
             },
 
@@ -27,7 +27,7 @@
         "background_image": 
         ""
         
-        
+        ,"category":4,"part":3
             },
 
     {
@@ -37,7 +37,7 @@
         "background_image": 
         ""
         
-        
+        ,"category":4,"part":3
             },
 
     {
@@ -46,7 +46,7 @@
         "answer": "answer",
         "background_image": 
         ""
-        
+        ,"category":4,"part":4
         
             }, {
                 "id":6,
@@ -55,5 +55,5 @@
                 "background_image": 
                 ""
                 
-                
+                ,"category":4,"part":5
                     }]
