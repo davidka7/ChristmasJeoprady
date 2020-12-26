@@ -10,7 +10,7 @@ import boopSfx from "./error.wav";
 import yes from "./yes.mp3";
 import "./Modals.css";
 import twitter from "./twitter.png";
-import twitter11 from "./twitter11.png";
+import a1 from "./twitter11.png";
 function SpecialModal34({
   changeTeam,
   team1,
@@ -86,12 +86,89 @@ function SpecialModal34({
             {" "}
             <div>
               {data.part == 3 ? (
-                <img
-                  className="special-s"
-                  // style={{ width: "100%", height: "100%" }}
-                  src={`${data.category}`}
-                />
+                data.category == 1 ? (
+                  <img
+                    className="special-s"
+                    // style={{ width: "100%", height: "100%" }}
+
+                    src={`${a1}`}
+                  />
+                ) : (
+                  <div></div>
+                )
               ) : (
+                // if (data.category == 2) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a2}
+                // />
+                // }
+                // if (data.category == 3) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a3}
+                // />
+                // }
+                // if (data.category == 4) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a4}
+                // />
+                // }
+                // if (data.category == 5) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a5}
+                // />
+                // }
+                // if (data.category == 6) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a6}
+                // />
+                // }
+                // if (data.category == 7) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a7}
+                // />
+                // }
+                // if (data.category == 8) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a8}
+                // />
+                // }
+                // if (data.category == 9) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a9}
+                // />
+                // }
+                // if (data.category == 10) {
+                //   return <img
+                //   className="special-s"
+                //   // style={{ width: "100%", height: "100%" }}
+
+                //   src={a10}
+                // />
+                // }
                 <div>data.question</div>
               )}
             </div>
