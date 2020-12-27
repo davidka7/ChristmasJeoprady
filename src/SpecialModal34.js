@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
 import { reducer1, reducer2, reducer3, reducer4, c1 } from "./actions/dragger";
 import useSound from "use-sound";
-import Bungs from "./Bungs";
+
 import boopSfx from "./error.wav";
 import yes from "./yes.mp3";
 import "./Modals.css";
@@ -32,12 +32,10 @@ function SpecialModal34({
   const [value, setValue] = useState("Reveal");
   const [teamPoints, setTeamPoints] = useState("");
   const [points] = useState(data.points);
-  const [familyDispute, setFamilyDispute] = useState(false);
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const openDiv = () => {
-    setFamilyDispute(true);
-  };
+
   const handlePress = () => {
     setTries(0);
     c1();
@@ -186,7 +184,10 @@ function SpecialModal34({
             </div>
           </Modal.Title>{" "}
           <Button variant="primary" onClick={handleClose}>
-            <div onClick={handlePress}> X</div>
+            <div onClick={handlePress}>
+              {" "}
+              <div onClick={changeTeam}> X</div>
+            </div>
           </Button>
         </Modal.Header>
         <Modal.Body className="fonty">
@@ -223,15 +224,14 @@ function SpecialModal34({
               </Button>
               <br />
             </div>
-            <div>
-              <label>First Answer</label> <input></input>
-            </div>
-            {familyDispute == true ? <Bungs /> : <div></div>}
-            <Button variant="dark">-{points / 2}</Button>
-            <Button variant="dark">+{points}</Button>
-            <Button onClick={openDiv} variant="secondary">
-              Family Dispute?
+
+            <Button style={{ float: "left" }} variant="dark">
+              -{points / 2}
             </Button>
+            <Button style={{ float: "right" }} variant="dark">
+              +{points}
+            </Button>
+
             <br />
           </div>
         </Modal.Footer>
