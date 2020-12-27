@@ -56,6 +56,38 @@ function SpecialModal34({
     setTeamPoints(team4);
   };
 
+  const playGamePlus = (e) => {
+    if (teamPoints === team1) {
+      e.persist();
+
+      reducer1(data.points);
+    } else if (teamPoints === team2) {
+      e.persist();
+      reducer2(data.points);
+    } else if (teamPoints === team3) {
+      e.persist();
+      reducer3(data.points);
+    } else if (teamPoints === team4) {
+      e.persist();
+      reducer4(data.points);
+    }
+  };
+  const playGameMinus = (e) => {
+    if (teamPoints === team1) {
+      e.persist();
+
+      reducer1(-data.points / 2);
+    } else if (teamPoints === team2) {
+      e.persist();
+      reducer2(-data.points / 2);
+    } else if (teamPoints === team3) {
+      e.persist();
+      reducer3(-data.points / 2);
+    } else if (teamPoints === team4) {
+      e.persist();
+      reducer4(-data.points / 2);
+    }
+  };
   return (
     <>
       {tries !== 0 ? (
@@ -212,24 +244,34 @@ function SpecialModal34({
               <Button onClick={handleTeam1} variant="outline-secondary">
                 {team1}
               </Button>
+              <br />
               <Button onClick={handleTeam2} variant="outline-secondary">
                 {team2}
-              </Button>{" "}
+              </Button>
               <br />
               <Button onClick={handleTeam3} variant="outline-secondary">
                 {team3}
               </Button>
+              <br />
               <Button onClick={handleTeam4} variant="outline-secondary">
                 {team4}
               </Button>
               <br />
             </div>
 
-            <Button style={{ float: "left" }} variant="dark">
-              -{points / 2}
+            <Button
+              style={{ float: "left" }}
+              onClick={playGameMinus}
+              variant="dark"
+            >
+              Lose Points!!
             </Button>
-            <Button style={{ float: "right" }} variant="dark">
-              +{points}
+            <Button
+              style={{ float: "right" }}
+              onClick={playGamePlus}
+              variant="dark"
+            >
+              Get Points!!
             </Button>
 
             <br />
