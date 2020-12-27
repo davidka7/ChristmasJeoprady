@@ -27,7 +27,6 @@ function Modals({
   const [play] = useSound(boopSfx);
   const [play1] = useSound(yes);
   const [show, setShow] = useState(false);
-  const [tries, setTries] = useState(2);
 
   const [points] = useState(data.points);
 
@@ -39,75 +38,42 @@ function Modals({
   };
   const handleSubmit = (e) => {
     changeTeam();
-    if (data.points !== 1200) {
-      if (data.answer === newValue) {
-        setTries(0);
-        play1();
-        handlePress();
-        if (TeamPlaying === team1) {
-          e.persist();
 
-          reducer1(data.points);
-        } else if (TeamPlaying === team2) {
-          e.persist();
-          reducer2(data.points);
-        } else if (TeamPlaying === team3) {
-          e.persist();
-          reducer3(data.points);
-        } else if (TeamPlaying === team4) {
-          e.persist();
-          reducer4(data.points);
-        }
-      } else {
-        {
-          play();
-          if (tries == 1) {
-            handlePress();
-          }
-          setTries(tries - 1);
-        }
+    if (data.answer === newValue) {
+      play1();
+      if (TeamPlaying === team1) {
+        e.persist();
+
+        reducer1(1200);
+      } else if (TeamPlaying === team2) {
+        e.persist();
+        reducer2(1200);
+      } else if (TeamPlaying === team3) {
+        e.persist();
+        reducer3(1200);
+      } else if (TeamPlaying === team4) {
+        e.persist(1200);
+        reducer4(data.points);
       }
     } else {
-      if (data.answer === newValue) {
-        play1();
-        handlePress();
-        if (TeamPlaying === team1) {
-          e.persist();
+      play();
+      if (TeamPlaying === team1) {
+        e.persist();
 
-          reducer1(data.points);
-        } else if (TeamPlaying === team2) {
-          e.persist();
-          reducer2(data.points);
-        } else if (TeamPlaying === team3) {
-          e.persist();
-          reducer3(data.points);
-        } else if (TeamPlaying === team4) {
-          e.persist();
-          reducer4(data.points);
-        }
-      } else {
-        {
-          play();
-
-          handlePress();
-          if (TeamPlaying === team1) {
-            e.persist();
-
-            reducer1(-800);
-          } else if (TeamPlaying === team2) {
-            e.persist(-800);
-            reducer2(data.points);
-          } else if (TeamPlaying === team3) {
-            e.persist(-800);
-            reducer3(data.points);
-          } else if (TeamPlaying === team4) {
-            e.persist(-800);
-            reducer4(data.points);
-          }
-        }
+        reducer1(-800);
+      } else if (TeamPlaying === team2) {
+        e.persist(-800);
+        reducer2(data.points);
+      } else if (TeamPlaying === team3) {
+        e.persist(-800);
+        reducer3(data.points);
+      } else if (TeamPlaying === team4) {
+        e.persist(-800);
+        reducer4(data.points);
       }
     }
   };
+
   const handlePress = () => {
     c1();
   };

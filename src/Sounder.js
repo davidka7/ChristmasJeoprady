@@ -8,7 +8,7 @@ function Sounder() {
 
   return (
     <div
-      className="first-Click glower"
+      className="first-Click glower1"
       onMouseEnter={() => {
         play();
       }}

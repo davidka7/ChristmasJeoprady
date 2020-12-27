@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
 import { reducer1, reducer2, reducer3, reducer4, c1 } from "./actions/dragger";
 import useSound from "use-sound";
-
+import Part1 from "./Part1";
 import boopSfx from "./error.wav";
 import yes from "./yes.mp3";
 import "./Modals.css";
@@ -29,7 +29,7 @@ function SpecialModal34({
   const [play1] = useSound(yes);
   const [show, setShow] = useState(false);
   const [tries, setTries] = useState(1);
-  const [value, setValue] = useState("Reveal");
+  const [value, setValue] = useState("Reveal Answer");
   const [teamPoints, setTeamPoints] = useState("");
   const [points] = useState(data.points);
 
@@ -124,95 +124,7 @@ function SpecialModal34({
               ) : (
                 <div></div>
               )}
-              {data.part == 3 ? (
-                data.category == 1 ? (
-                  <div>
-                    <img
-                      className="special-s"
-                      // style={{ width: "100%", height: "100%" }}
-
-                      src={`${a1}`}
-                    />{" "}
-                    {data.question}
-                  </div>
-                ) : (
-                  <div></div>
-                )
-              ) : (
-                // if (data.category == 2) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a2}
-                // />
-                // }
-                // if (data.category == 3) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a3}
-                // />
-                // }
-                // if (data.category == 4) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a4}
-                // />
-                // }
-                // if (data.category == 5) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a5}
-                // />
-                // }
-                // if (data.category == 6) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a6}
-                // />
-                // }
-                // if (data.category == 7) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a7}
-                // />
-                // }
-                // if (data.category == 8) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a8}
-                // />
-                // }
-                // if (data.category == 9) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a9}
-                // />
-                // }
-                // if (data.category == 10) {
-                //   return <img
-                //   className="special-s"
-                //   // style={{ width: "100%", height: "100%" }}
-
-                //   src={a10}
-                // />
-                // }
-                <div></div>
-              )}
+              {data.part == 3 ? <Part1 data={data} /> : <div></div>}
             </div>
           </Modal.Title>{" "}
           <Button variant="primary" onClick={handleClose}>
