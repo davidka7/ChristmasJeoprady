@@ -11,6 +11,7 @@ import yes from "./yes.mp3";
 import "./Modals.css";
 import twitter from "./twitter.png";
 import a1 from "./twitter11.png";
+import Sounder from "./Sounder";
 function SpecialModal34({
   changeTeam,
   team1,
@@ -85,14 +86,25 @@ function SpecialModal34({
           <Modal.Title>
             {" "}
             <div>
+              {data.part == 2 ? (
+                <div>
+                  {data.question}
+                  <Sounder />{" "}
+                </div>
+              ) : (
+                <div></div>
+              )}
               {data.part == 3 ? (
                 data.category == 1 ? (
-                  <img
-                    className="special-s"
-                    // style={{ width: "100%", height: "100%" }}
+                  <div>
+                    <img
+                      className="special-s"
+                      // style={{ width: "100%", height: "100%" }}
 
-                    src={`${a1}`}
-                  />
+                      src={`${a1}`}
+                    />{" "}
+                    {data.question}
+                  </div>
                 ) : (
                   <div></div>
                 )
@@ -169,7 +181,7 @@ function SpecialModal34({
                 //   src={a10}
                 // />
                 // }
-                <div>data.question</div>
+                <div></div>
               )}
             </div>
           </Modal.Title>{" "}

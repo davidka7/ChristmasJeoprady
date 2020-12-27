@@ -12,7 +12,7 @@
 
     {
         "id":2,
-        "points": 300, "question": "question",
+        "points": 300, "question": "Guess what Bible Character is this?",
         "answer": "answer",
         "background_image": 
         ""
@@ -21,7 +21,7 @@
             },
             {
                 "id":3,
-                "points": 300, "question": "question",
+                "points": 300, "question": "Who made the Tweet?",
                 "answer": "answer",
                 "background_image": 
                 ""
@@ -31,7 +31,7 @@
 
                     {
                         "id":4,
-                        "points": 300, "question": "question",
+                        "points": 300, "question": "Who made the Tweet?",
                         "answer": "answer",
                         "background_image": 
                         ""

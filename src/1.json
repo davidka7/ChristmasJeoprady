@@ -13,17 +13,17 @@
     {
         "id": 2,
         "points": 100,
-        "question": "Does Santa think i68 is worthy of his presents?",
+        "question": "Guess what Bible Character is this?",
         "answer": "yes",
         "background_image": 
-        "https://i.pinimg.com/originals/c2/e6/55/c2e655256db995ffac7d560921869be9.jpg"
+        ""
         ,"category":1,"part":2
        
       },
       {
         "id": 3,
         "points": 100,
-        "question": "Who steals food at applebees?",
+        "question": "Who made the Tweet?",
         "answer": "danik",
         "background_image": 
         ""
@@ -33,7 +33,7 @@
       {
         "id": 4,
         "points": 100,
-        "question": "question",
+        "question": "Who made the Tweet?",
         "answer": "answer",
         "background_image": 
         ""
