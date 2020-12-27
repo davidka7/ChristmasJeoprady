@@ -79,23 +79,9 @@ function Modals({
   };
   return (
     <>
-      {tries !== 0 ? (
-        <Card className={`outliners z100-size hover1`} onClick={handleShow}>
-          <Card.Title className="fonty hover2">{data.points}</Card.Title>
-
-          <small bg="dark" className="text-muted no-wrapper hover2">
-            {tries} Tries
-          </small>
-        </Card>
-      ) : (
-        <Card className={`outliners z${points}-size`} bg="transparent">
-          <Card.Title className="fonty">{data.answer}</Card.Title>
-
-          <small bg="dark" className="text-muted no-wrapper">
-            Complete
-          </small>
-        </Card>
-      )}
+      <Card className={`outliners z100-size hover1`} onClick={handleShow}>
+        <Card.Title className="fonty hover2">{data.points}</Card.Title>
+      </Card>
       <Modal
         className="sizer"
         style={{

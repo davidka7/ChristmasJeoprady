@@ -6,7 +6,7 @@ import game from "./game.mp3";
 import "./winner.css";
 
 function Winner(props) {
-  const [play, { stop }] = useSound(game, { volume: 0.3 });
+  const [play, { stop }] = useSound(game, { volume: 1 });
   return (
     <>
       <div
