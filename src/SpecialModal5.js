@@ -50,28 +50,34 @@ function SpecialModal5({
             <div onClick={handlePress}> X</div>
           </Button>
         </Modal.Header>
+        <Modal.Title className="align">
+          Did the Chicken Cross the Road?
+        </Modal.Title>
         <Modal.Body className="fonty"> </Modal.Body>
         <Modal.Footer>
           <div className="spaceside1">
             <br />
-            <Button>{team1}</Button>
+            <div className="align fonty">{team1}</div>{" "}
+            <input placeholder={`Bet Your Points`}></input>{" "}
+            <Button>Lost It</Button>
+            <Button>Got It</Button>
             <br />
-            <Button>{team2}</Button>
+            <div className="align fonty">{team2}</div>{" "}
+            <input placeholder={`Bet Your Points`}></input>{" "}
+            <Button>Lost It</Button>
+            <Button>Got It</Button>
             <br />
-            <Button>{team3}</Button>
+            <div className="align fonty">{team3}</div>{" "}
+            <input placeholder={`Bet Your Points`}></input>{" "}
+            <Button>Lost It</Button>
+            <Button>Got It</Button>
             <br />
-            <Button>{team4}</Button>
+            <div className="align fonty">{team4}</div>{" "}
+            <input placeholder={`Bet Your Points`}></input>{" "}
+            <Button>Lost It</Button>
+            <Button>Got It</Button>
           </div>
-          <div className="spaceside1">
-            <br />
-            <input></input>
-            <br />
-            <input></input>
-            <br />
-            <input></input>
-            <br />
-            <input></input>
-          </div>
+
           <br />
         </Modal.Footer>
       </Modal>{" "}
