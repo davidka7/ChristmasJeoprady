@@ -29,7 +29,7 @@ function SpecialModal34({
   const [play1] = useSound(yes);
   const [show, setShow] = useState(false);
   const [tries, setTries] = useState(1);
-  const [value, setValue] = useState("Reveal Answer");
+
   const [teamPoints, setTeamPoints] = useState("");
   const [points] = useState(data.points);
 
@@ -40,9 +40,7 @@ function SpecialModal34({
     setTries(0);
     c1();
   };
-  const handleValue = () => {
-    setValue(data.answer);
-  };
+
   const handleTeam1 = () => {
     setTeamPoints(team1);
   };
@@ -117,7 +115,7 @@ function SpecialModal34({
             {" "}
             <div>
               {data.part == 2 ? (
-                <div>
+                <div className="align">
                   {data.question}
                   <Sounder />{" "}
                 </div>
@@ -134,10 +132,7 @@ function SpecialModal34({
             </div>
           </Button>
         </Modal.Header>
-        <Modal.Body className="fonty">
-          {" "}
-          <div onClick={handleValue}>{value}</div>
-        </Modal.Body>
+
         <Modal.Footer></Modal.Footer>
         <Modal.Footer>
           {" "}

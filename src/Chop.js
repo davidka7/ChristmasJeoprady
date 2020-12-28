@@ -21,6 +21,7 @@ import data2 from "./2.json";
 import data3 from "./3.json";
 import data4 from "./4.json";
 import data5 from "./5.json";
+import data6 from "./6.json";
 import category from "./category.json";
 import last from "./last.json";
 import { c1 } from "./actions/dragger";
@@ -250,6 +251,36 @@ function Chop({ points, c1 }) {
                       />
                     );
                   })}
+                </CardDeck>
+                <br />
+                <CardDeck className="paddings">
+                  {data6.map((data) => {
+                    return (
+                      <SpecialModal34
+                        changeTeam={changeTeam}
+                        team1={team1}
+                        team2={team2}
+                        team3={team3}
+                        team4={team4}
+                        TeamPlaying={TeamPlaying}
+                        key
+                        data={data}
+                      />
+                    );
+                  })}
+                </CardDeck>
+                <br />
+                <CardDeck className="paddings">
+                  <div>Final Question Bet Your Points</div>
+                  <SpecialModal5
+                    changeTeam={changeTeam}
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    team4={team4}
+                    TeamPlaying={TeamPlaying}
+                    key
+                  />
                 </CardDeck>
               </div>
             </div>

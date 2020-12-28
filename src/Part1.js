@@ -9,7 +9,7 @@ function Part1({ data }) {
       {data.category == 1 ? (
         <div>
           <img
-            className="special-s"
+            className="special-s align"
             // style={{ width: "100%", height: "100%" }}
 
             src={`${a1}`}

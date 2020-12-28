@@ -60,5 +60,26 @@
         ,"category":1,"part":5
        
       }
+      ,
+      {
+        "id": 5,
+        "points": 100,
+        "question": "question",
+        "answer": "answer",
+        "background_image": 
+        ""
+        ,"category":1,"part":4
+       
+      },
+      {
+        "id": 6,
+        "points": 100,
+        "question": "question",
+        "answer": "answer",
+        "background_image": 
+        ""
+        ,"category":1,"part":5
+       
+      }
    
 ]

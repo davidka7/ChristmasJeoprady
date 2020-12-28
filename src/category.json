@@ -1,20 +1,36 @@
 [
-    {
-        "id":61,
-      "category": "i68 history"
-      },
-    {
-        "id":62, "category": "Bible Theology"},
-      {
-        "id":63,"category": "Twitter Feed"},
-      
-      {
-        "id":66,"category": "Twitter Feed"},
-      {
-        "id":67,"category": "Denis Facts"},
-      
-      {
-        "id":69,"category": "IQ 200"
-       
-      }
+  {
+    "id": 61,
+    "category": "i68 history"
+  },
+  {
+    "id": 62,
+    "category": "Bible Theology"
+  },
+  {
+    "id": 63,
+    "category": "Twitter Feed"
+  },
+
+  {
+    "id": 66,
+    "category": "American History"
+  },
+  {
+    "id": 67,
+    "category": "Sports"
+  },
+
+  {
+    "id": 69,
+    "category": "Davids IQ"
+  },
+  {
+    "id": 70,
+    "category": "Music"
+  },
+  {
+    "id": 71,
+    "category": "i68 Quotes"
+  }
 ]
