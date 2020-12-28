@@ -271,7 +271,6 @@ function Chop({ points, c1 }) {
                 </CardDeck>
                 <br />
                 <CardDeck className="paddings">
-                  <div>Final Question Bet Your Points</div>
                   <SpecialModal5
                     changeTeam={changeTeam}
                     team1={team1}

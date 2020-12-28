@@ -39,17 +39,11 @@ function SpecialModal5({
 
   return (
     <>
-      {tries !== 0 ? (
-        <Card onClick={handleShow}>
-          <Card.Title className="fonty hover2"></Card.Title>
-        </Card>
-      ) : (
-        <Card bg="transparent">
-          <small bg="dark" className="text-muted no-wrapper">
-            Complete
-          </small>
-        </Card>
-      )}
+      <Card onClick={handleShow} bg="transparent">
+        <small bg="dark" className="text-muted no-wrapper">
+          <Button variant="dark">Final Question Bet Your Points</Button>
+        </small>
+      </Card>
       <Modal className="sizer" show={show} onHide={handleClose}>
         <Modal.Header>
           <Button variant="primary" onClick={handleClose}>
@@ -58,10 +52,26 @@ function SpecialModal5({
         </Modal.Header>
         <Modal.Body className="fonty"> </Modal.Body>
         <Modal.Footer>
-          <div className="spaceside">
+          <div className="spaceside1">
             <br />
+            <Button>{team1}</Button>
+            <br />
+            <Button>{team2}</Button>
+            <br />
+            <Button>{team3}</Button>
+            <br />
+            <Button>{team4}</Button>
           </div>
-
+          <div className="spaceside1">
+            <br />
+            <input></input>
+            <br />
+            <input></input>
+            <br />
+            <input></input>
+            <br />
+            <input></input>
+          </div>
           <br />
         </Modal.Footer>
       </Modal>{" "}
