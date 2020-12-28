@@ -51,12 +51,12 @@ function SpecialModal5({
           </Button>
         </Modal.Header>
         <Modal.Title className="align">
-          Did the Chicken Cross the Road?
+          Can You Guess the Answer to The last Question? You can bet your points
+          for a chance to double it or lose it.
         </Modal.Title>
-        <Modal.Body className="fonty"> </Modal.Body>
+
         <Modal.Footer>
           <div className="spaceside1">
-            <br />
             <div className="align fonty">{team1}</div>{" "}
             <input placeholder={`Bet Your Points`}></input>{" "}
             <Button>Lost It</Button>

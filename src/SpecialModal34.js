@@ -133,7 +133,6 @@ function SpecialModal34({
           </Button>
         </Modal.Header>
 
-        <Modal.Footer></Modal.Footer>
         <Modal.Footer>
           {" "}
           <div>
