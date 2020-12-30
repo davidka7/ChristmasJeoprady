@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
 import { c1, reducer1, reducer2, reducer3, reducer4 } from "./actions/dragger";
 import useSound from "use-sound";
-import error from "./error.wav";
+import lost from "./error.wav";
 import mario from "./mario.mp3";
 import "./Modals.css";
 
