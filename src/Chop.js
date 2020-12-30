@@ -87,16 +87,10 @@ function Chop({ points, c1 }) {
   };
 
   console.log(points.checker);
-  if (points.checker == 48 && firstCheck == true) {
+  if (points.checker == 1 && firstCheck == true) {
     setFirstCheck(false);
   }
-  if (points.checker == 49 && firstCheck1 == true) {
-    setFirstCheck1(false);
-  }
-  const handleSkip = () => {
-    c1();
-    changeTeam();
-  };
+
   const handleMusic = () => {
     play();
   };
@@ -382,140 +376,90 @@ function Chop({ points, c1 }) {
         </div>
       ) : (
         <div>
-          {" "}
-          {firstCheck1 ? (
-            <div class="bubbles  first-Click">
-              {" "}
-              <h1>
-                Risk it???
-                <br /> Either you add a 1,200 <br />
-                or lose 800, up to you.
-              </h1>
-              <Card bg="transparent" className="special-font">
-                <span> {`Team ${TeamPlaying} Turn`}</span>
-              </Card>
-              <br />
-              <h1>
-                Take It
-                <div className="Winner">
-                  <Modals
-                    changeTeam={changeTeam}
-                    team1={team1}
-                    team2={team2}
-                    team3={team3}
-                    team4={team4}
-                    TeamPlaying={TeamPlaying}
-                    key
-                    data={last[switch1]}
-                  />
-                </div>
-              </h1>
-              <br />
-              <Button
-                onMouseEnter={() => {
-                  play1();
-                }}
-                onMouseLeave={() => {
-                  stop();
-                }}
-                onClick={handleSkip}
-              >
-                <h1>Skip It</h1>
-              </Button>
-              <br />
-              <br />
-            </div>
-          ) : (
-            <div>
-              <CardDeck className="paddings max-height">
+          <CardDeck className="paddings max-height">
+            {" "}
+            <Card bg={"transparent"} className={`lifelights`}>
+              <Card.Title className="second-Click "> Team {team1}</Card.Title>
+              <Card.Title className="second-Click">
                 {" "}
-                <Card bg={"transparent"} className={`lifelights`}>
-                  <Card.Title className="second-Click ">
-                    {" "}
-                    Team {team1}
-                  </Card.Title>
-                  <Card.Title className="second-Click">
-                    {" "}
-                    Points: {points.reducers1}
-                  </Card.Title>
-                </Card>
-                <Card bg={"transparent"} className={`lifelights`}>
-                  <Card.Title className="second-Click">Team {team2}</Card.Title>
-                  <Card.Title className="second-Click">
-                    {" "}
-                    Points: {points.reducers2}
-                  </Card.Title>
-                </Card>
-                <Card bg={"transparent"} className={`lifelights`}>
-                  <Card.Title className="second-Click">Team {team3}</Card.Title>
-                  <Card.Title className="second-Click">
-                    {" "}
-                    Points: {points.reducers3}
-                  </Card.Title>
-                </Card>
-                <Card bg={"transparent"} className={`lifelights`}>
-                  <Card.Title className="second-Click">Team {team4}</Card.Title>
-                  <Card.Title className="second-Click">
-                    {" "}
-                    Points: {points.reducers4}
-                  </Card.Title>
-                </Card>
-              </CardDeck>
+                Points: {points.reducers1}
+              </Card.Title>
+            </Card>
+            <Card bg={"transparent"} className={`lifelights`}>
+              <Card.Title className="second-Click">Team {team2}</Card.Title>
+              <Card.Title className="second-Click">
+                {" "}
+                Points: {points.reducers2}
+              </Card.Title>
+            </Card>
+            <Card bg={"transparent"} className={`lifelights`}>
+              <Card.Title className="second-Click">Team {team3}</Card.Title>
+              <Card.Title className="second-Click">
+                {" "}
+                Points: {points.reducers3}
+              </Card.Title>
+            </Card>
+            <Card bg={"transparent"} className={`lifelights`}>
+              <Card.Title className="second-Click">Team {team4}</Card.Title>
+              <Card.Title className="second-Click">
+                {" "}
+                Points: {points.reducers4}
+              </Card.Title>
+            </Card>
+          </CardDeck>
 
-              <br />
-              <br />
-              <div className="Winner">
-                {points.reducers1 > points.reducers2 &&
-                points.reducers1 > points.reducers3 &&
-                points.reducers1 > points.reducers4 ? (
-                  <div className="glower">
-                    <h1 className="first-Click"> Team {team1}</h1>
-                    <Winner animal={points.animal1} />
-                  </div>
-                ) : (
-                  <div></div>
-                )}
+          <br />
+          <br />
+          <div className="Winner">
+            {points.reducers1 > points.reducers2 &&
+            points.reducers1 > points.reducers3 &&
+            points.reducers1 > points.reducers4 ? (
+              <div className="glower">
+                <h1 className="first-Click"> Team {team1}</h1>
+                <Winner animal={points.animal1} />
               </div>
-              <div className="Winner">
-                {points.reducers2 > points.reducers4 &&
-                points.reducers2 > points.reducers1 &&
-                points.reducers2 > points.reducers3 ? (
-                  <div className="glower">
-                    <h1 className="first-Click"> Team {team2}</h1>
-                    <Winner animal={points.animal2} />
-                  </div>
-                ) : (
-                  <div></div>
-                )}
+            ) : (
+              <div></div>
+            )}
+          </div>
+          <div className="Winner">
+            {points.reducers2 > points.reducers4 &&
+            points.reducers2 > points.reducers1 &&
+            points.reducers2 > points.reducers3 ? (
+              <div className="glower">
+                <h1 className="first-Click"> Team {team2}</h1>
+                <Winner animal={points.animal2} />
               </div>
-              <div className="Winner">
-                {points.reducers3 > points.reducers4 &&
-                points.reducers3 > points.reducers1 &&
-                points.reducers3 > points.reducers2 ? (
-                  <div className="glower">
-                    <h1 className="first-Click "> Team {team3}</h1>
+            ) : (
+              <div></div>
+            )}
+          </div>
+          <div className="Winner">
+            {points.reducers3 > points.reducers4 &&
+            points.reducers3 > points.reducers1 &&
+            points.reducers3 > points.reducers2 ? (
+              <div className="glower">
+                <h1 className="first-Click "> Team {team3}</h1>
 
-                    <Winner animal={points.animal3} />
-                  </div>
-                ) : (
-                  <div></div>
-                )}
+                <Winner animal={points.animal3} />
               </div>
-              <div className="Winner">
-                {points.reducers4 > points.reducers1 &&
-                points.reducers4 > points.reducers2 &&
-                points.reducers4 > points.reducers3 ? (
-                  <div className="glower">
-                    <h1 className="first-Click"> Team {team4}</h1>
+            ) : (
+              <div></div>
+            )}
+          </div>
+          <div className="Winner">
+            {points.reducers4 > points.reducers1 &&
+            points.reducers4 > points.reducers2 &&
+            points.reducers4 > points.reducers3 ? (
+              <div className="glower">
+                <h1 className="first-Click"> Team {team4}</h1>
 
-                    <Winner animal={points.animal4} />
-                  </div>
-                ) : (
-                  <div></div>
-                )}
+                <Winner animal={points.animal4} />
               </div>
-            </div>
-          )}{" "}
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       )}
     </div>

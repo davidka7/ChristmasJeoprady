@@ -3,11 +3,10 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
-import { reducer1, reducer2, reducer3, reducer4, c1 } from "./actions/dragger";
+import { c1, reducer1, reducer2, reducer3, reducer4 } from "./actions/dragger";
 import useSound from "use-sound";
-import Bungs from "./Bungs";
-import boopSfx from "./error.wav";
-import yes from "./yes.mp3";
+import error from "./error.wav";
+import mario from "./mario.mp3";
 import "./Modals.css";
 
 function SpecialModal5({
@@ -15,15 +14,14 @@ function SpecialModal5({
   team2,
   team3,
   team4,
-
+  c1,
   reducer1,
   reducer2,
   reducer3,
   reducer4,
-  c1,
 }) {
-  const [play] = useSound(boopSfx);
-  const [play1] = useSound(yes);
+  const [play] = useSound(mario);
+  const [play1] = useSound(lost);
   const [show, setShow] = useState(false);
   const [tries, setTries] = useState(1);
   const [value1, setValue1] = useState(0);
@@ -32,15 +30,13 @@ function SpecialModal5({
   const [value4, setValue4] = useState(0);
 
   const handleClose = () => {
-    c1();
-
     setShow(false);
+    c1();
   };
   const handleShow = () => setShow(true);
 
   const handlePress = () => {
     setTries(0);
-    c1();
   };
   const handleChange1 = (e) => {
     setValue1(parseInt(e.target.value));
@@ -106,8 +102,14 @@ function SpecialModal5({
               value={value1}
               placeholder={`Bet Your Points`}
             ></input>{" "}
-            <Button onClick={handleSubmit1}>Lost It</Button>
-            <Button onClick={handleSubmit2}>Got It</Button>
+            <Button onClick={handleSubmit1}>
+              {" "}
+              <div onClick={play1}>Lost It!!</div>
+            </Button>
+            <Button onClick={handleSubmit2}>
+              {" "}
+              <div onClick={play}>Get Points!!</div>
+            </Button>
             <br />
             <div className="align fonty">{team2}</div>{" "}
             <input
@@ -115,8 +117,13 @@ function SpecialModal5({
               value={value2}
               placeholder={`Bet Your Points`}
             ></input>{" "}
-            <Button onClick={handleSubmit3}>Lost It</Button>
-            <Button onClick={handleSubmit4}>Got It</Button>
+            <Button onClick={handleSubmit3}>
+              <div onClick={play1}>Lost It!!</div>
+            </Button>
+            <Button onClick={handleSubmit4}>
+              {" "}
+              <div onClick={play}>Get Points!!</div>
+            </Button>
             <br />
             <div className="align fonty">{team3}</div>{" "}
             <input
@@ -124,8 +131,13 @@ function SpecialModal5({
               value={value3}
               placeholder={`Bet Your Points`}
             ></input>{" "}
-            <Button onClick={handleSubmit5}>Lost It</Button>
-            <Button onClick={handleSubmit6}>Got It</Button>
+            <Button onClick={handleSubmit5}>
+              <div onClick={play1}>Lost It!!</div>
+            </Button>
+            <Button onClick={handleSubmit6}>
+              {" "}
+              <div onClick={play}>Get Points!!</div>
+            </Button>
             <br />
             <div className="align fonty">{team4}</div>{" "}
             <input
@@ -133,8 +145,13 @@ function SpecialModal5({
               value={value4}
               placeholder={`Bet Your Points`}
             ></input>{" "}
-            <Button onClick={handleSubmit7}>Lost It</Button>
-            <Button onClick={handleSubmit8}>Got It</Button>
+            <Button onClick={handleSubmit7}>
+              <div onClick={play1}>Lost It!!</div>
+            </Button>
+            <Button onClick={handleSubmit8}>
+              {" "}
+              <div onClick={play}>Get Points!!</div>
+            </Button>
           </div>
 
           <br />
@@ -146,10 +163,11 @@ function SpecialModal5({
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    c1: () => c1(dispatch),
     reducer1: (points) => reducer1(points, dispatch),
     reducer2: (points) => reducer2(points, dispatch),
     reducer3: (points) => reducer3(points, dispatch),
+    reducer4: (points) => reducer4(points, dispatch),
+    c1: () => c1(dispatch),
   };
 };
 

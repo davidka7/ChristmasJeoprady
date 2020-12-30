@@ -3,7 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
-import { reducer1, reducer2, reducer3, reducer4, c1 } from "./actions/dragger";
+import { reducer1, reducer2, reducer3, reducer4 } from "./actions/dragger";
 import useSound from "use-sound";
 import Part1 from "./Part1";
 import boopSfx from "./error.wav";
@@ -26,7 +26,6 @@ function SpecialModal34({
   reducer2,
   reducer3,
   reducer4,
-  c1,
 }) {
   const [play] = useSound(boopSfx);
   const [play1] = useSound(mario);
@@ -41,7 +40,6 @@ function SpecialModal34({
 
   const handlePress = () => {
     setTries(0);
-    c1();
   };
 
   const handleTeam1 = () => {
@@ -226,7 +224,7 @@ const mapDispatchToProps = (dispatch) => {
     reducer2: (points) => reducer2(points, dispatch),
     reducer3: (points) => reducer3(points, dispatch),
     reducer4: (points) => reducer4(points, dispatch),
-    c1: () => c1(dispatch),
+
     // reducer1: (points) => reducer1(points, dispatch),
     // reducer2: (points) => reducer2(points, dispatch),
     // reducer3: (points) => reducer3(points, dispatch),
