@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import Modals from "./Modals";
-import SpecialModal from "./SpecialModal";
-import SpecialModal2 from "./SpecialModal2";
+
 import SpecialModal34 from "./SpecialModal34";
 import SpecialModal5 from "./SpecialModal5";
 
@@ -13,7 +11,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Sounder2 from "./Sounder2";
 import "./Chop.css";
 
 import data1 from "./1.json";
@@ -23,7 +21,7 @@ import data4 from "./4.json";
 import data5 from "./5.json";
 import data6 from "./6.json";
 import category from "./category.json";
-import last from "./last.json";
+
 import { c1 } from "./actions/dragger";
 import useSound from "use-sound";
 
@@ -34,7 +32,7 @@ function Chop({ points, c1 }) {
   const [play1, { stop }] = useSound(among, { volume: 0.6 });
 
   const [firstCheck, setFirstCheck] = useState(true);
-  const [firstCheck1, setFirstCheck1] = useState(true);
+
   const [trueOrFalse, setTrueOrFalse] = useState(false);
   const [team1, setTeam1] = useState("");
   const [TeamPlaying, setTeamPlaying] = useState(" ");
@@ -148,14 +146,19 @@ function Chop({ points, c1 }) {
                   </Card>
                 </CardDeck>
                 <CardDeck className="paddings">
+                  <br />
+                  <br />
+                  <br />
+                  <br /> <br />
                   <Card bg="transparent" className="special-font">
-                    <span> {`Team ${TeamPlaying} Turn`}</span>
+                    <span>
+                      {" "}
+                      {`Team ${TeamPlaying} Turn`}
+                      <Sounder2 />
+                    </span>
                   </Card>
-                  <br />
-                  <br />
-                  <br />
                 </CardDeck>
-                <br /> <br />
+
                 <CardDeck className="paddings">
                   {category.map((category) => {
                     return <Modals1 key data={category} />;

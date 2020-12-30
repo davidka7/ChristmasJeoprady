@@ -33,6 +33,9 @@ function SpecialModal5({
     setShow(false);
     c1();
   };
+  const handleClose1 = () => {
+    setShow(false);
+  };
   const handleShow = () => setShow(true);
 
   const handlePress = () => {
@@ -82,7 +85,7 @@ function SpecialModal5({
           <Button variant="dark">Final Question Bet Your Points</Button>
         </small>
       </Card>
-      <Modal className="sizer" show={show} onHide={handleClose}>
+      <Modal className="sizer" show={show} onHide={handleClose1}>
         <Modal.Header>
           <Button variant="primary" onClick={handleClose}>
             <div onClick={handlePress}> X</div>

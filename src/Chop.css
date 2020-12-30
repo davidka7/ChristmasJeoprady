@@ -96,6 +96,18 @@ font-size:4vw;
                    3px 3px #ffffff; */
               
 }
+.first-Click3{
+  /* color: white; */
+ 
+  right:80%;
+  height:100px !important;
+  color:rgb(255, 255, 255);
+  font-size:4vw;
+  /* text-shadow: 1px 1px #ffffff, 
+                     2px 2px #ffffff, 
+                     3px 3px #ffffff; */
+                
+  }
 
 .bubbles {
   
@@ -184,6 +196,12 @@ display: flex;
 justify-content: space-around;
 
       }
+      .paddings3{
+     
+        display: flex;
+        justify-content: space-between;
+        
+              }
  .maxer{
 width:19vw ;
 font-size:2.3vw
