@@ -14,6 +14,7 @@ import twitter from "./twitter.png";
 import dima from "./4rz5qe.gif";
 import photo from "./IMG_6794.jpg";
 import Sounder from "./Sounder";
+import Sounder from "./Sounder1";
 function SpecialModal34({
   changeTeam,
   team1,
@@ -129,7 +130,7 @@ function SpecialModal34({
               {data.part == 2 ? (
                 <div className="align">
                   {data.question}
-                  <Sounder />{" "}
+                  {data.category == 1 ? <Sounder /> : <Sounder1 />}
                 </div>
               ) : (
                 <div></div>
