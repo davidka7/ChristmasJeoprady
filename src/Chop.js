@@ -87,10 +87,10 @@ function Chop({ points, c1 }) {
   };
 
   console.log(points.checker);
-  if (points.checker == 30 && firstCheck == true) {
+  if (points.checker == 48 && firstCheck == true) {
     setFirstCheck(false);
   }
-  if (points.checker == 34 && firstCheck1 == true) {
+  if (points.checker == 49 && firstCheck1 == true) {
     setFirstCheck1(false);
   }
   const handleSkip = () => {

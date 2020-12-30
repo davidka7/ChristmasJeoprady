@@ -27,14 +27,57 @@ function SpecialModal5({
   const [play1] = useSound(yes);
   const [show, setShow] = useState(false);
   const [tries, setTries] = useState(1);
-  const [value, setValue] = useState("Reveal");
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
+  const [value3, setValue3] = useState(0);
+  const [value4, setValue4] = useState(0);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    c1();
+
+    setShow(false);
+  };
   const handleShow = () => setShow(true);
 
   const handlePress = () => {
     setTries(0);
     c1();
+  };
+  const handleChange1 = (e) => {
+    setValue1(e.target.value);
+  };
+  const handleChange2 = (e) => {
+    setValue2(e.target.value);
+  };
+  const handleChange3 = (e) => {
+    setValue3(e.target.value);
+  };
+  const handleChange4 = (e) => {
+    setValue4(e.target.value);
+  };
+  const handleSubmit1 = (e) => {
+    reducer1(value1);
+  };
+  const handleSubmit2 = (e) => {
+    reducer1(-value1);
+  };
+  const handleSubmit3 = (e) => {
+    reducer1(value2);
+  };
+  const handleSubmit4 = (e) => {
+    reducer1(-value2);
+  };
+  const handleSubmit5 = (e) => {
+    reducer1(value3);
+  };
+  const handleSubmit6 = (e) => {
+    reducer1(-value3);
+  };
+  const handleSubmit7 = (e) => {
+    reducer1(value4);
+  };
+  const handleSubmit8 = (e) => {
+    reducer1(-value4);
   };
 
   return (
@@ -52,30 +95,47 @@ function SpecialModal5({
         </Modal.Header>
         <Modal.Title className="align">
           Can You Guess the Answer to The last Question? You can bet your points
-          for a chance to double it or lose it.
+          for a chance to double it or lose it. How many days has it been since
+          Denis became the pastor?
         </Modal.Title>
 
         <Modal.Footer>
           <div className="spaceside1">
             <div className="align fonty">{team1}</div>{" "}
-            <input placeholder={`Bet Your Points`}></input>{" "}
-            <Button>Lost It</Button>
-            <Button>Got It</Button>
+            <input
+              onChange={handleChange1}
+              value={value1}
+              placeholder={`Bet Your Points`}
+            ></input>{" "}
+            <Button onClick={handleSubmit1}>Lost It</Button>
+            <Button onClick={handleSubmit2}>Got It</Button>
             <br />
             <div className="align fonty">{team2}</div>{" "}
-            <input placeholder={`Bet Your Points`}></input>{" "}
-            <Button>Lost It</Button>
-            <Button>Got It</Button>
+            <input
+              onChange={handleChange2}
+              value={value2}
+              placeholder={`Bet Your Points`}
+            ></input>{" "}
+            <Button onClick={handleSubmit3}>Lost It</Button>
+            <Button onClick={handleSubmit4}>Got It</Button>
             <br />
             <div className="align fonty">{team3}</div>{" "}
-            <input placeholder={`Bet Your Points`}></input>{" "}
-            <Button>Lost It</Button>
-            <Button>Got It</Button>
+            <input
+              onChange={handleChange3}
+              value={value3}
+              placeholder={`Bet Your Points`}
+            ></input>{" "}
+            <Button onClick={handleSubmit5}>Lost It</Button>
+            <Button onClick={handleSubmit6}>Got It</Button>
             <br />
             <div className="align fonty">{team4}</div>{" "}
-            <input placeholder={`Bet Your Points`}></input>{" "}
-            <Button>Lost It</Button>
-            <Button>Got It</Button>
+            <input
+              onChange={handleChange4}
+              value={value4}
+              placeholder={`Bet Your Points`}
+            ></input>{" "}
+            <Button onClick={handleSubmit7}>Lost It</Button>
+            <Button onClick={handleSubmit8}>Got It</Button>
           </div>
 
           <br />
