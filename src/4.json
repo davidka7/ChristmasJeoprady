@@ -50,12 +50,12 @@
         
             }, {
                 "id":6,
-                "points": 400, "question": "What is it that goes up, but never comes down?",
-                "answer": "Age",
+                "points": 400, "question": "Who is Guilty, the man in the green shirt, or the man in the white shirt?",
+                "answer": "Green",
                 "background_image": 
                 ""
                 
-                ,"category":1,"part":1
+                ,"category":1,"part":5
                     },
                     
                     {

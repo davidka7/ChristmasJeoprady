@@ -15,6 +15,7 @@ import dima from "./4rz5qe.gif";
 import photo from "./IMG_6794.jpg";
 import Sounder from "./Sounder";
 import Sounder1 from "./Sounder1";
+import video from "./lol.mp4";
 function SpecialModal34({
   changeTeam,
   team1,
@@ -129,6 +130,13 @@ function SpecialModal34({
                 <div className="align">
                   {data.question}
                   {data.category == 1 ? <Sounder /> : <Sounder1 />}
+                </div>
+              ) : (
+                <div></div>
+              )}
+              {data.part == 5 ? (
+                <div className="align video">
+                  <iframe src={video} />
                 </div>
               ) : (
                 <div></div>
