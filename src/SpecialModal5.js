@@ -11,7 +11,6 @@ import yes from "./yes.mp3";
 import "./Modals.css";
 
 function SpecialModal5({
-  changeTeam,
   team1,
   team2,
   team3,
@@ -44,40 +43,40 @@ function SpecialModal5({
     c1();
   };
   const handleChange1 = (e) => {
-    setValue1(e.target.value);
+    setValue1(parseInt(e.target.value));
   };
   const handleChange2 = (e) => {
-    setValue2(e.target.value);
+    setValue2(parseInt(e.target.value));
   };
   const handleChange3 = (e) => {
-    setValue3(e.target.value);
+    setValue3(parseInt(e.target.value));
   };
   const handleChange4 = (e) => {
-    setValue4(e.target.value);
+    setValue4(parseInt(e.target.value));
   };
-  const handleSubmit1 = (e) => {
-    reducer1(value1);
-  };
-  const handleSubmit2 = (e) => {
+  const handleSubmit1 = () => {
     reducer1(-value1);
   };
-  const handleSubmit3 = (e) => {
-    reducer1(value2);
+  const handleSubmit2 = () => {
+    reducer1(value1);
   };
-  const handleSubmit4 = (e) => {
-    reducer1(-value2);
+  const handleSubmit3 = () => {
+    reducer2(-value2);
   };
-  const handleSubmit5 = (e) => {
-    reducer1(value3);
+  const handleSubmit4 = () => {
+    reducer2(value2);
   };
-  const handleSubmit6 = (e) => {
-    reducer1(-value3);
+  const handleSubmit5 = () => {
+    reducer3(-value3);
   };
-  const handleSubmit7 = (e) => {
-    reducer1(value4);
+  const handleSubmit6 = () => {
+    reducer3(value3);
   };
-  const handleSubmit8 = (e) => {
-    reducer1(-value4);
+  const handleSubmit7 = () => {
+    reducer4(-value4);
+  };
+  const handleSubmit8 = () => {
+    reducer4(value4);
   };
 
   return (
@@ -148,9 +147,9 @@ function SpecialModal5({
 const mapDispatchToProps = (dispatch) => {
   return {
     c1: () => c1(dispatch),
-    // reducer1: (points) => reducer1(points, dispatch),
-    // reducer2: (points) => reducer2(points, dispatch),
-    // reducer3: (points) => reducer3(points, dispatch),
+    reducer1: (points) => reducer1(points, dispatch),
+    reducer2: (points) => reducer2(points, dispatch),
+    reducer3: (points) => reducer3(points, dispatch),
   };
 };
 
