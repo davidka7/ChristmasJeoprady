@@ -1,7 +1,7 @@
 [          {
                 "id":1,
-                "points": 500, "question": "question",
-                "answer": "answer",
+                "points": 500, "question": "Famous person that visited our youth in 2007?",
+                "answer": "Miss Ukraine(Lika Roman)",
                 "background_image": 
                 ""
                 ,"category":1,"part":1
@@ -9,8 +9,8 @@
                     },
                     {
                         "id":2,
-                        "points": 500, "question": "Guess what Bible Character is this?",
-                        "answer": "answer",
+                        "points": 500, "question": "Where did Jesus walk on water(what body of water)?",
+                        "answer": "Sea Of Galilee",
                         "background_image": 
                         ""
                         ,"category":5,"part":2
@@ -19,7 +19,7 @@
                             {
                                 "id":3,
                                 "points": 500, "question": "Who made the Tweet? Your Choices ☟",
-                                "answer": "answer",
+                                "answer": "Ruvim Y",
                                 "background_image": 
                                 ""
                                 
@@ -27,16 +27,16 @@
                                     },
                                     {
                                         "id":4,
-                                        "points": 500, "question": "Who made the Tweet?",
-                                        "answer": "answer",
+                                        "points": 500, "question": "Year the Great Depression began?",
+                                        "answer": "1929",
                                         "background_image": 
                                         ""
                                         
                                         ,"category":1,"part":1
                                             }, {
                                                 "id":5,
-                                                "points": 500, "question": "question",
-                                                "answer": "answer",
+                                                "points": 500, "question": "Which former Seahawks running back was the NFL MVP in 2005?",
+                                                "answer": "Shaun Alexander",
                                                 "background_image": 
                                                 ""
                                                 ,"category":1,"part":1    
@@ -44,8 +44,8 @@
                                                     },
                                                     {
                                                         "id":6,
-                                                        "points": 500, "question": "question",
-                                                        "answer": "answer",
+                                                        "points": 500, "question": "How could a man go out in the pouring rain without protection, and not have a hair on his head get wet?",
+                                                        "answer": "He is Bald",
                                                         "background_image": 
                                                         ""
                                                         
@@ -54,8 +54,8 @@
                                                             {
                                                               "id": 5,
                                                               "points": 500,
-                                                              "question": "question",
-                                                              "answer": "answer",
+                                                              "question": "Every Key signature can refer in particular to two scales, the major scale and its relative minor. What is the relative minor key for Db major?",
+                                                              "answer": "Bb minor",
                                                               "background_image": 
                                                               ""
                                                               ,"category":1,"part":1
@@ -64,8 +64,8 @@
                                                             {
                                                               "id": 6,
                                                               "points": 500,
-                                                              "question": "question",
-                                                              "answer": "answer",
+                                                              "question": "'Because I'm only 14'?",
+                                                              "answer": "Nelya",
                                                               "background_image": 
                                                               ""
                                                               ,"category":1,"part":1

@@ -1,7 +1,7 @@
 [          {
     "id":1,
-    "points": 600, "question": "question",
-    "answer": "answer",
+    "points": 600, "question": "10 Youth Camps in order?",
+    "answer": "i68 or Isaiah 6:8, More of Him, Less of Me, Born to be Radical, Overcoming Inertia, Fight & Conquer, Guard Watch Pray, Outside These Walls, Time to Climb, No Other Name, Inside Out",
     "background_image": 
     ""
     ,"category":1,"part":1
@@ -9,8 +9,8 @@
         },
         {
             "id":2,
-            "points": 600, "question": "Guess what Bible Character is this?",
-            "answer": "answer",
+            "points": 600, "question": "Who is High Priest of Jerusalem who put Jesus on trial?",
+            "answer": "Caiaphas",
             "background_image": 
             ""
             ,"category":6,"part":2
@@ -19,7 +19,7 @@
                 {
                     "id":3,
                     "points": 600, "question": "Who made the Tweet? Your Choices ☟",
-                    "answer": "answer",
+                    "answer": "Noah",
                     "background_image": 
                     ""
                     
@@ -27,16 +27,16 @@
                         },
                         {
                             "id":4,
-                            "points": 600, "question": "Who made the Tweet?",
-                            "answer": "answer",
+                            "points": 600, "question": "The first McDonalds was established in this year?",
+                            "answer": "1940",
                             "background_image": 
                             ""
                             
                             ,"category":1,"part":1
                                 }, {
                                     "id":5,
-                                    "points": 600, "question": "question",
-                                    "answer": "answer",
+                                    "points": 600, "question": "Country that won the first ever soccer World Cup?",
+                                    "answer": "Uruguay",
                                     "background_image": 
                                     ""
                                     ,"category":1,"part":1      
@@ -44,8 +44,8 @@
                                         },
                                         {
                                             "id":6,
-                                            "points": 600, "question": "question",
-                                            "answer": "answer",
+                                            "points": 600, "question": "How many letters are in the alphabet?",
+                                            "answer": "11",
                                             "background_image": 
                                             ""
                                             
@@ -54,8 +54,8 @@
                                                 {
                                                   "id": 5,
                                                   "points": 600,
-                                                  "question": "question",
-                                                  "answer": "answer",
+                                                  "question": "What does pizzicato mean?",
+                                                  "answer": "Plucking the strings in an orchestra",
                                                   "background_image": 
                                                   ""
                                                   ,"category":1,"part":1
@@ -64,8 +64,8 @@
                                                 {
                                                   "id": 6,
                                                   "points": 600,
-                                                  "question": "question",
-                                                  "answer": "answer",
+                                                  "question": "'дядя Вася'?",
+                                                  "answer": "George",
                                                   "background_image": 
                                                   ""
                                                   ,"category":1,"part":1

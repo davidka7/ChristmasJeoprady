@@ -1,17 +1,17 @@
 [
     {
       "id": 1,
-      "points": 200, "question": "After seeing this, do you believe in angels?",
-      "answer": "yes",
+      "points": 200, "question": "What is this called?",
+      "answer": "Normal",
       "background_image": 
-      "https://www.i68youth.com/wp-content/uploads/2016/12/IMG_4881-2.jpg"
+      ""
      
-      ,"category":1,"part":1
+      ,"category":1,"part":4
     },
     {
         "id": 2,
-        "points": 200, "question": "Guess what Bible Character is this?",
-        "answer": "answer",
+        "points": 200, "question": "What was Jesus' first Mircale?",
+        "answer": "Water>Wine",
         "background_image": 
         ""
         ,"category":2,"part":2
@@ -19,15 +19,15 @@
       {
         "id": 3,
         "points": 200, "question": "Who made the Tweet? Your Choices ☟",
-        "answer": "answer",
+        "answer": "Alex A.",
         "background_image": 
         "","category":2,"part":3
        
       },
       {
         "id": 4,
-        "points": 200, "question": "Who made the Tweet?",
-        "answer": "answer",
+        "points": 200, "question": "Largest state by land mass?",
+        "answer": "Alaska",
         "background_image": 
         ""
         ,"category":1,"part":1
@@ -35,16 +35,16 @@
      
       {
         "id": 5,
-        "points": 200, "question": "question",
-        "answer": "answer",
+        "points": 200, "question": "First African American baseball player?",
+        "answer": "Jackie Robinson",
         "background_image": 
         "","category":1,"part":1
        
       },
       {
         "id": 6,
-        "points": 200, "question": "question",
-        "answer": "answer",
+        "points": 200, "question": "If you divide 30 by half and add ten, what do you get?",
+        "answer": "70",
         "background_image": 
         ""
         ,"category":1,"part":1
@@ -53,8 +53,8 @@
       {
         "id": 5,
         "points": 200,
-        "question": "question",
-        "answer": "answer",
+        "question": "How many beats are in a half note?",
+        "answer": "2",
         "background_image": 
         ""
         ,"category":1,"part":1
@@ -63,8 +63,8 @@
       {
         "id": 6,
         "points": 200,
-        "question": "question",
-        "answer": "answer",
+        "question": "'Brukfast'?",
+        "answer": "Andrey",
         "background_image": 
         ""
         ,"category":1,"part":1

@@ -2,18 +2,18 @@
 
     {
         "id":1,
-        "points": 400, "question": "question",
+        "points": 400, "question": "Name a song we used to do at youth from this album?",
         "answer": "answer",
         "background_image": 
         ""
-        ,"category":1,"part":1
+        ,"category":2,"part":4
         
             },
 
     {
         "id":2,
-        "points": 400, "question": "Guess what Bible Character is this?",
-        "answer": "answer",
+        "points": 400, "question": "How many plagues did God send on Egypt?",
+        "answer": "10",
         "background_image": 
         ""
         ,"category":4,"part":2
@@ -23,7 +23,7 @@
     {
         "id":3,
         "points": 400, "question": "Who made the Tweet? Your Choices ☟",
-        "answer": "answer",
+        "answer": "Denis",
         "background_image": 
         ""
         
@@ -32,8 +32,8 @@
 
     {
         "id":4,
-        "points": 400, "question": "Who made the Tweet?",
-        "answer": "answer",
+        "points": 400, "question": "He was elected president for 4 terms?",
+        "answer": "Franklin D Roosevelt",
         "background_image": 
         ""
         
@@ -42,16 +42,16 @@
 
     {
         "id":5,
-        "points": 400, "question": "question",
-        "answer": "answer",
+        "points": 400, "question": "American athlete that won 28 Olympic Medals?",
+        "answer": "Michael Phelps",
         "background_image": 
         ""
         ,"category":1,"part":1
         
             }, {
                 "id":6,
-                "points": 400, "question": "question",
-                "answer": "answer",
+                "points": 400, "question": "What is it that goes up, but never comes down?",
+                "answer": "Age",
                 "background_image": 
                 ""
                 
@@ -61,8 +61,8 @@
                     {
                       "id": 5,
                       "points": 400,
-                      "question": "question",
-                      "answer": "answer",
+                      "question": "What is the highest female voice part in a four-part choir?",
+                      "answer": "Soprano",
                       "background_image": 
                       ""
                       ,"category":1,"part":1
@@ -71,8 +71,8 @@
                     {
                       "id": 6,
                       "points": 400,
-                      "question": "question",
-                      "answer": "answer",
+                      "question": "'Welcome to Youf'?",
+                      "answer": "Alex",
                       "background_image": 
                       ""
                       ,"category":1,"part":1

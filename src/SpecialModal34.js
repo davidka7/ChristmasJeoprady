@@ -7,10 +7,11 @@ import { reducer1, reducer2, reducer3, reducer4, c1 } from "./actions/dragger";
 import useSound from "use-sound";
 import Part1 from "./Part1";
 import boopSfx from "./error.wav";
-import yes from "./yes.mp3";
+import mario from "./mario.mp3";
 import "./Modals.css";
 import twitter from "./twitter.png";
-import a1 from "./twitter11.png";
+// import a1 from "./twitter11.png";
+import dima from "./4rz5qe.gif";
 import Sounder from "./Sounder";
 function SpecialModal34({
   changeTeam,
@@ -26,7 +27,7 @@ function SpecialModal34({
   c1,
 }) {
   const [play] = useSound(boopSfx);
-  const [play1] = useSound(yes);
+  const [play1] = useSound(mario);
   const [show, setShow] = useState(false);
   const [tries, setTries] = useState(1);
 
@@ -114,6 +115,16 @@ function SpecialModal34({
           <Modal.Title>
             {" "}
             <div>
+              {data.part == 1 ? (
+                <div className="align">{data.question}</div>
+              ) : (
+                <div></div>
+              )}
+              {data.part == 4 ? (
+                <div className="align">{data.question}</div>
+              ) : (
+                <div></div>
+              )}
               {data.part == 2 ? (
                 <div className="align">
                   {data.question}
@@ -145,6 +156,15 @@ function SpecialModal34({
             ) : (
               <div></div>
             )}
+            {data.part == 4 ? (
+              <img
+                className="special-s"
+                // style={{ width: "100%", height: "100%" }}
+                src={`${dima}`}
+              />
+            ) : (
+              <div></div>
+            )}
             <br />
             <div className="spaceside">
               <Button onClick={handleTeam1} variant="outline-secondary">
@@ -170,14 +190,14 @@ function SpecialModal34({
               onClick={playGameMinus}
               variant="dark"
             >
-              Lose Points!!
+              <div onClick={play}>Lose Points!!</div>
             </Button>
             <Button
               style={{ float: "right" }}
               onClick={playGamePlus}
               variant="dark"
             >
-              Get Points!!
+              <div onClick={play1}>Get Points!!</div>
             </Button>
 
             <br />

@@ -2,8 +2,8 @@
     
     {
 "id":1,
-"points": 300, "question": "question",
-"answer": "answer",
+"points": 300, "question": "Youth Service switched to english in this year?",
+"answer": "2015",
 "background_image": 
 ""
 ,"category":1,"part":1
@@ -12,8 +12,8 @@
 
     {
         "id":2,
-        "points": 300, "question": "Guess what Bible Character is this?",
-        "answer": "answer",
+        "points": 300, "question": "To what city was Saul traveling when he was hit by a great and blinding light?",
+        "answer": "Damascus",
         "background_image": 
         ""
         ,"category":3,"part":2
@@ -22,7 +22,7 @@
             {
                 "id":3,
                 "points": 300, "question": "Who made the Tweet? Your Choices ☟",
-                "answer": "answer",
+                "answer": "Andre",
                 "background_image": 
                 ""
                 ,"category":3,"part":3
@@ -31,8 +31,8 @@
 
                     {
                         "id":4,
-                        "points": 300, "question": "Who made the Tweet?",
-                        "answer": "answer",
+                        "points": 300, "question": "Year that America declared independence?",
+                        "answer": "1776",
                         "background_image": 
                         ""
                         ,"category":1,"part":1
@@ -40,8 +40,8 @@
                             },
                             {
                                 "id":5,
-                                "points": 300, "question": "question",
-                                "answer": "answer",
+                                "points": 300, "question": "Sports that Michael Jordan played professionally other than basketball?",
+                                "answer": "Baseball",
                                 "background_image": 
                                 ""
                                 ,"category":1,"part":1
@@ -49,8 +49,8 @@
                                     },
                                     {
                                         "id":6,
-                                        "points": 300, "question": "question",
-                                        "answer": "answer",
+                                        "points": 300, "question": "How did the boy kick his soccer ball ten feet, and then have it come back to him on its own?",
+                                        "answer": "He Kicked Up",
                                         "background_image": 
                                         ""
                                         ,"category":1,"part":1
@@ -59,8 +59,8 @@
                                             {
                                               "id": 5,
                                               "points": 300,
-                                              "question": "question",
-                                              "answer": "answer",
+                                              "question": "What is the name of a Russian stringed folk instrument with a triangular body?",
+                                              "answer": "Balalaika",
                                               "background_image": 
                                               ""
                                               ,"category":1,"part":1
@@ -69,8 +69,8 @@
                                             {
                                               "id": 6,
                                               "points": 300,
-                                              "question": "question",
-                                              "answer": "answer",
+                                              "question": "'They got Shotted'",
+                                              "answer": "Heather",
                                               "background_image": 
                                               ""
                                               ,"category":1,"part":1

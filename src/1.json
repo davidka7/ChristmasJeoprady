@@ -5,7 +5,7 @@
       "question": "What year was the name i68 was given to our youth ministry?",
       "answer": "2011",
       "background_image": 
-      "",
+      "https://www.animationsoftware7.com/img/agifs/snow02.gif",
       "category":1,"part":1
     
      
@@ -64,11 +64,11 @@
       {
         "id": 5,
         "points": 100,
-        "question": "What song is this?",
+        "question": "Can you Guess What song is this?",
         "answer": "Living Hope",
         "background_image": 
-        ""
-        ,"category":1,"part":1
+        "https://media3.giphy.com/avatars/nf-giphy/0LyJOrmShlZI.gif"
+        ,"category":1,"part":2
        
       },
       {
