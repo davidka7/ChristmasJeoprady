@@ -12,6 +12,7 @@ import "./Modals.css";
 import twitter from "./twitter.png";
 // import a1 from "./twitter11.png";
 import dima from "./4rz5qe.gif";
+import photo from "./IMG_6794.jpg";
 import Sounder from "./Sounder";
 function SpecialModal34({
   changeTeam,
@@ -157,11 +158,21 @@ function SpecialModal34({
               <div></div>
             )}
             {data.part == 4 ? (
-              <img
-                className="special-s"
-                // style={{ width: "100%", height: "100%" }}
-                src={`${dima}`}
-              />
+              <div>
+                {data.category == 1 ? (
+                  <img
+                    className="special-s"
+                    // style={{ width: "100%", height: "100%" }}
+                    src={`${dima}`}
+                  />
+                ) : (
+                  <img
+                    className="special-s"
+                    // style={{ width: "100%", height: "100%" }}
+                    src={`${photo}`}
+                  />
+                )}
+              </div>
             ) : (
               <div></div>
             )}
