@@ -10,7 +10,7 @@ import store from "./store";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* <Chop /> */} <h1>hi</h1>
+      <Chop />
     </Provider>
     ,
   </React.StrictMode>,
