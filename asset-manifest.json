@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/davidka7/ChristmasJeoprady.git/static/css/main.0cd7f4ab.chunk.css",
-    "main.js": "/davidka7/ChristmasJeoprady.git/static/js/main.5e6a50f2.chunk.js",
-    "main.js.map": "/davidka7/ChristmasJeoprady.git/static/js/main.5e6a50f2.chunk.js.map",
-    "runtime-main.js": "/davidka7/ChristmasJeoprady.git/static/js/runtime-main.ebf71773.js",
-    "runtime-main.js.map": "/davidka7/ChristmasJeoprady.git/static/js/runtime-main.ebf71773.js.map",
-    "static/js/2.a9670527.chunk.js": "/davidka7/ChristmasJeoprady.git/static/js/2.a9670527.chunk.js",
-    "static/js/2.a9670527.chunk.js.map": "/davidka7/ChristmasJeoprady.git/static/js/2.a9670527.chunk.js.map",
-    "static/js/3.4bfee0ea.chunk.js": "/davidka7/ChristmasJeoprady.git/static/js/3.4bfee0ea.chunk.js",
-    "static/js/3.4bfee0ea.chunk.js.map": "/davidka7/ChristmasJeoprady.git/static/js/3.4bfee0ea.chunk.js.map",
-    "index.html": "/davidka7/ChristmasJeoprady.git/index.html",
-    "static/css/main.0cd7f4ab.chunk.css.map": "/davidka7/ChristmasJeoprady.git/static/css/main.0cd7f4ab.chunk.css.map",
-    "static/js/2.a9670527.chunk.js.LICENSE.txt": "/davidka7/ChristmasJeoprady.git/static/js/2.a9670527.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/davidka7/ChristmasJeoprady.git/static/media/pp.a6df9b89.jpg"
+    "main.css": "/ChristmasJeoprady/static/css/main.ea23e7ea.chunk.css",
+    "main.js": "/ChristmasJeoprady/static/js/main.5e6a50f2.chunk.js",
+    "main.js.map": "/ChristmasJeoprady/static/js/main.5e6a50f2.chunk.js.map",
+    "runtime-main.js": "/ChristmasJeoprady/static/js/runtime-main.b0420a94.js",
+    "runtime-main.js.map": "/ChristmasJeoprady/static/js/runtime-main.b0420a94.js.map",
+    "static/js/2.a9670527.chunk.js": "/ChristmasJeoprady/static/js/2.a9670527.chunk.js",
+    "static/js/2.a9670527.chunk.js.map": "/ChristmasJeoprady/static/js/2.a9670527.chunk.js.map",
+    "static/js/3.4bfee0ea.chunk.js": "/ChristmasJeoprady/static/js/3.4bfee0ea.chunk.js",
+    "static/js/3.4bfee0ea.chunk.js.map": "/ChristmasJeoprady/static/js/3.4bfee0ea.chunk.js.map",
+    "index.html": "/ChristmasJeoprady/index.html",
+    "static/css/main.ea23e7ea.chunk.css.map": "/ChristmasJeoprady/static/css/main.ea23e7ea.chunk.css.map",
+    "static/js/2.a9670527.chunk.js.LICENSE.txt": "/ChristmasJeoprady/static/js/2.a9670527.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ChristmasJeoprady/static/media/pp.a6df9b89.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ebf71773.js",
+    "static/js/runtime-main.b0420a94.js",
     "static/js/2.a9670527.chunk.js",
-    "static/css/main.0cd7f4ab.chunk.css",
+    "static/css/main.ea23e7ea.chunk.css",
     "static/js/main.5e6a50f2.chunk.js"
   ]
 }
