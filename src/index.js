@@ -9,7 +9,10 @@ import store from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>{/* <Chop /> */}</Provider>,
+    <Provider store={store}>
+      {/* <Chop /> */} <h1>hi</h1>
+    </Provider>
+    ,
   </React.StrictMode>,
   document.getElementById("root")
 );
